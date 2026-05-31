@@ -26,17 +26,17 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "sphinx_book_theme"
+html_theme = "alabaster"
 
 html_static_path = ["_static"]
-html_logo = "_static/img/pyspinw_logo.png"
 html_css_files = [
     "site.css",
 ]
 
 html_theme_options = {
-    "home_page_in_toc": False,
-    "show_navbar_depth": 1,
-    "max_navbar_depth": 4,
-    "collapse_navbar": True,
+    "logo": "img/pyspinw_logo.png",
+    "logo_name": False,
+    "page_width": "1040px",
+    "sidebar_collapse": True,
+    "sidebar_width": "240px",
 }

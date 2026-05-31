@@ -28,7 +28,7 @@ The Projects
          :alt: SpinW logo
          :class: project-logo
 
-      `SpinW <spinw/overview.html>`_
+      `SpinW <https://github.com/SpinW/spinw>`_
 
       Original SpinW written in MATLAB.
 
@@ -48,7 +48,7 @@ The Projects
          :alt: pySpinW logo
          :class: project-logo
 
-      `pySpinW <pyspinw/overview.html>`_
+      `pySpinW <https://github.com/SpinW/pySpinW>`_
 
       Python implementation of SpinW.
 
@@ -68,7 +68,7 @@ The Projects
          :alt: SpinWcore logo
          :class: project-logo
 
-      `SpinWcore <spinwcore.html>`_
+      `SpinWcore <https://github.com/SpinW/SpinWcore>`_
 
       SpinW core functions written in C++ for speed.
 
@@ -115,7 +115,8 @@ Magnetic structures
 * Definition of 1D, 2D, and 3D magnetic structures.
 * Representation of incommensurate structures using a rotating coordinate
   system or complex basis vectors.
-* Generation and plotting of magnetic structures on magnetic supercells.
+* Generation of magnetic structures on a magnetic supercell.
+* Plotting of magnetic structures.
 
 Magnetic interactions
 ~~~~~~~~~~~~~~~~~~~~~
@@ -124,26 +125,43 @@ Magnetic interactions
   distance.
 * Heisenberg, Dzyaloshinskii-Moriya, anisotropic, and general 3x3 exchange
   tensors.
-* Single-ion anisotropy tensor and Zeeman energy in homogeneous magnetic field.
+* Arbitrary single-ion anisotropy tensor, including easy-plane and easy-axis
+  anisotropy.
+* Zeeman energy in homogeneous magnetic field, including arbitrary g-tensor.
 * Symmetry-allowed tensor elements calculated from the crystallographic space
   group.
 
 Simulation of magnetic structures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Classical energy minimization and simulated annealing.
-* Thermodynamic properties, magnetic structure factors, neutron diffraction,
-  and diffuse scattering.
+* Classical energy minimization assuming a single-k magnetic structure for a
+  fast and simple ground-state solution.
+* Simulated annealing using the Metropolis algorithm on an arbitrarily large
+  magnetic supercell.
+* Thermodynamic equilibrium properties, including heat capacity and magnetic
+  susceptibility.
+* Magnetic structure factor calculation using FFT.
+* Simulation of magnetic neutron diffraction and diffuse scattering.
 * Magnetic excitations in commensurate and incommensurate structures using
   linear spin-wave theory.
 * Spin-wave dispersion, spin-spin correlation functions, neutron scattering
   cross sections, and powder-averaged spectra.
+* Polarized neutron scattering cross sections.
+* Different moment sizes for different magnetic atoms.
 
-Plotting and fitting spin-wave spectra
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Plotting spin-wave spectra
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Plotting of dispersions, correlation functions, and convoluted spectra.
-* Integration into Horace for comparison with time-of-flight neutron data.
+* Calculation and plotting of convoluted spectra for direct comparison with
+  inelastic neutron scattering.
+* Full integration into `Horace <http://horace.isis.rl.ac.uk>`_ for plotting
+  and comparison with time-of-flight neutron data.
+
+Fitting spin-wave spectra
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Any parameter in the Hamiltonian can be fitted.
 * Fitting Hamiltonian parameters robustly against measured spectra.
 
 Our Partners
