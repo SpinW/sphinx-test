@@ -101,3 +101,26 @@
   object-fit: contain;
   padding: 0.25rem;
 }
+
+/* Keep generated API pages compact enough to scan. */
+.bd-article dl.py {
+  margin-bottom: 0.75rem;
+}
+
+.bd-article dl.py > dd {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.bd-article dl.py > dd > p {
+  margin-bottom: 0.5rem;
+}
+
+.bd-article dl.py > dd > dl.py {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bd-article dl.py > dd > dl.py > dd {
+  margin-bottom: 0.25rem;
+}
