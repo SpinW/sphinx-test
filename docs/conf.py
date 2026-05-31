@@ -16,6 +16,7 @@ release = "0.0.01"
 
 extensions = [
     "sphinx.ext.autodoc",
+    "sphinx.ext.mathjax",
 ]
 
 templates_path = ["_templates"]
@@ -27,3 +28,11 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 html_theme = "furo"
 html_static_path = ["_static"]
+html_css_files = [
+    "site.css",
+]
+
+html_theme_options = {
+    "sidebar_hide_name": False,
+    "top_of_page_button": "edit",
+}
