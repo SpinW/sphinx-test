@@ -7,6 +7,18 @@
     radial-gradient(circle at 80% 20%, rgba(250, 204, 21, 0.35), transparent 26rem);
 }
 
+.navbar-brand img,
+.bd-sidebar-primary .sidebar-logo {
+  width: min(100%, 210px);
+  max-height: 78px;
+  object-fit: contain;
+}
+
+.navbar-brand .title,
+.sidebar-brand-text {
+  display: none;
+}
+
 .landing-hero__content {
   max-width: 960px;
   margin: 0 auto;
@@ -111,6 +123,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
+  align-items: flex-start;
   color: var(--color-foreground-primary);
   text-decoration: none;
 }
@@ -122,6 +135,14 @@
 
 .project-card strong {
   font-size: 1.2rem;
+}
+
+.project-card__image {
+  width: 96px;
+  height: 76px;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 0.2rem;
 }
 
 .project-card__label {
@@ -140,6 +161,30 @@
 
 .feature-grid ul {
   padding-left: 1.2rem;
+}
+
+.hamiltonian-image {
+  display: block;
+  max-width: min(100%, 520px);
+  margin: 1rem auto;
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.25rem;
+  align-items: center;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.partner-grid img {
+  width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  padding: 0.75rem;
+  border: 1px solid var(--color-background-border);
+  border-radius: 8px;
+  background: #ffffff;
 }
 
 @media (max-width: 640px) {

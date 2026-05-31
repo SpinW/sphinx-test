@@ -28,11 +28,13 @@ SpinW
      </div>
      <div class="project-grid">
        <a class="project-card" href="spinw/overview.html">
+         <img class="project-card__image" src="_static/img/spinw3_logo.png" alt="SpinW logo">
          <span class="project-card__label">MATLAB</span>
          <strong>SpinW</strong>
          <span>Original SpinW implementation for MATLAB.</span>
        </a>
        <a class="project-card" href="pyspinw/overview.html">
+         <img class="project-card__image" src="_static/img/pyspinw_logo.png" alt="pySpinW logo">
          <span class="project-card__label">Python</span>
          <strong>pySpinW</strong>
          <span>Python implementation of SpinW.</span>
@@ -51,11 +53,9 @@ Features
 SpinW solves spin Hamiltonians using classical and quasi-classical numerical
 methods:
 
-.. math::
-
-   H = \sum_{i,j} S_i J_{ij} S_j
-       + \sum_i S_i A_i S_i
-       + \mu_B \sum_i B g_i S_i
+.. image:: _static/img/hamiltonian.png
+   :alt: SpinW Hamiltonian
+   :class: hamiltonian-image
 
 where :math:`S_i` are spin vector operators, :math:`J_{ij}` are exchange
 matrices, :math:`A_i` are anisotropy matrices, :math:`B` is the external
@@ -96,6 +96,19 @@ magnetic field, and :math:`g_i` is the g-tensor.
          <li>Calculate powder-averaged spectra and neutron scattering cross sections.</li>
        </ul>
      </section>
+   </div>
+
+Our Partners
+------------
+
+.. raw:: html
+
+   <div class="partner-grid">
+     <img src="_static/img/ess_logo.png" alt="European Spallation Source">
+     <img src="_static/img/isis_logo.png" alt="ISIS, Science & Technology Facilities Council">
+     <img src="_static/img/psi_logo.png" alt="Paul Scherrer Institut">
+     <img src="_static/img/hzb_logo.gif" alt="Helmholtz-Zentrum Berlin">
+     <img src="_static/img/nbia_logo.png" alt="Niels Bohr International Academy">
    </div>
 
 Documentation

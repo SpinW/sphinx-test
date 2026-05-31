@@ -26,13 +26,10 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "furo"
+html_theme = "sphinx_book_theme"
+
 html_static_path = ["_static"]
+html_logo = "_static/img/spinw3_header.png"
 html_css_files = [
     "site.css",
 ]
-
-html_theme_options = {
-    "sidebar_hide_name": False,
-    "top_of_page_button": "edit",
-}
