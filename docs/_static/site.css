@@ -110,3 +110,50 @@
   object-fit: contain;
   padding: 0.25rem;
 }
+
+div.highlight {
+  background: #f7f7f7;
+}
+
+div.highlight pre,
+table.highlighttable pre {
+  padding: 1.1rem 1.35rem;
+  background: #f7f7f7;
+  color: #111111;
+  line-height: 1.45;
+}
+
+div.highlight .go,
+div.highlight .gp {
+  color: #111111;
+}
+
+div.highlight .k,
+div.highlight .kn,
+div.highlight .kd,
+div.highlight .kr,
+div.highlight .nb {
+  color: #0f4c6a;
+  font-weight: 700;
+}
+
+div.highlight .s,
+div.highlight .s1,
+div.highlight .s2,
+div.highlight .sa,
+div.highlight .sb,
+div.highlight .sc,
+div.highlight .sd,
+div.highlight .se,
+div.highlight .sh,
+div.highlight .si,
+div.highlight .sx {
+  color: #4f8f20;
+}
+
+div.highlight .c,
+div.highlight .c1,
+div.highlight .cm {
+  color: #6f6f6f;
+  font-style: italic;
+}
