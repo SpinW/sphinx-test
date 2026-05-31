@@ -970,7 +970,7 @@ dependencies = [
 requires-dist = [
     { name = "furo", specifier = ">=2025.12.19" },
     { name = "sphinx", specifier = ">=9.1.0" },
-    { name = "spinw-python", git = "https://github.com/SpinW/pySpinW.git?rev=main" },
+    { name = "spinw-python", editable = "../pySpinW" },
 ]
 
 [[package]]
@@ -1029,8 +1029,7 @@ wheels = [
 
 [[package]]
 name = "spinw-python"
-version = "1.0.0a2"
-source = { git = "https://github.com/SpinW/pySpinW.git?rev=main#6085af7a33186eba67131ab26a88394e4a0e73d0" }
+source = { editable = "../pySpinW" }
 dependencies = [
     { name = "ase" },
     { name = "matplotlib" },
@@ -1041,6 +1040,19 @@ dependencies = [
     { name = "pyside6-essentials" },
     { name = "scipy" },
     { name = "spglib" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "ase", specifier = ">=3.26.0" },
+    { name = "matplotlib", specifier = ">=3.10.5" },
+    { name = "numpy", specifier = ">=2.0.0" },
+    { name = "packaging" },
+    { name = "pycifrw" },
+    { name = "pyopengl", specifier = ">=3.1.10" },
+    { name = "pyside6-essentials" },
+    { name = "scipy" },
+    { name = "spglib", specifier = ">2.1.0" },
 ]
 
 [[package]]
