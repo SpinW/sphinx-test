@@ -212,13 +212,4 @@ Our Partners
    resources/faq
    resources/publications
    resources/presentations
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: Report Issue
-
-   SpinW <https://github.com/SpinW/spinw/issues>
-   pySpinW <https://github.com/SpinW/pySpinW/issues>
-
    resources/contact
