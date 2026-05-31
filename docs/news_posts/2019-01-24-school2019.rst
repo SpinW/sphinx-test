@@ -1,0 +1,10 @@
+3rd Horace and SpinW School - 2019
+==================================
+
+Posted 2019-01-24. Tagged: workshop.
+
+.. image:: ../_static/img/news/HoraceSpinW_groupPic.jpg
+   :alt: Horace and SpinW School group photo
+
+The 3rd Horace and SpinW School has taken place. We survived and it was a
+success!

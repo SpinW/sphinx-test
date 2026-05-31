@@ -1,0 +1,21 @@
+SpinW v3.1 Is Released
+======================
+
+Posted 2019-04-25. Tagged: releases.
+
+Bug fixes and improvements galore!
+
+Introducing SpinW 3.1.
+
+There have been a lot of bug and compatibility fixes including:
+
+* Better Horace integration by @mducle
+* Faster mex calculation on pre R2017b systems @mducle
+* Fixed errors while plotting structures and dispersion
+* Fixed multi g-tensor calculations
+* Fixed updating
+* Better testing
+* Minor text fixes
+
+Standard installation procedure is required. Help can be found at
+`http://www.spinw.org/installation/ <http://www.spinw.org/installation/>`_.
