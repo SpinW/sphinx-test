@@ -17,6 +17,8 @@ release = "0.0.01"
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.mathjax",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.napoleon",
 ]
 
 templates_path = ["_templates"]
@@ -26,17 +28,36 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "alabaster"
+html_theme = "pydata_sphinx_theme"
+
+html_theme_options = {
+    "logo": {
+        "image_light": "_static/img/pyspinw_logo.png",
+        "image_dark": "_static/img/pyspinw_logo.png",
+    },
+    "navbar_align": "content",
+    "navbar_center": ["navbar-nav"],
+    "navbar_end": ["theme-switcher", "navbar-icon-links"],
+    "navbar_persistent": ["search-button"],
+    "icon_links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/SpinW",
+            "icon": "fa-brands fa-github",
+        },
+    ],
+    "navigation_depth": 3,
+    "show_nav_level": 1,
+    "collapse_navigation": False,
+    "primary_sidebar_end": [],
+}
+
+html_sidebars = {
+    "index": [],
+    "**": ["sidebar-collapse", "sidebar-nav-bs"],
+}
 
 html_static_path = ["_static"]
 html_css_files = [
     "site.css",
 ]
-
-html_theme_options = {
-    "logo": "img/pyspinw_logo.png",
-    "logo_name": False,
-    "page_width": "1040px",
-    "sidebar_collapse": True,
-    "sidebar_width": "240px",
-}

@@ -194,40 +194,6 @@ Our Partners
    :hidden:
 
    news
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: SpinW Docs
-
-   spinw/installation
-   spinw/tutorials
-   SpinW Issues <https://github.com/SpinW/spinw/issues>
-   spinw/class
-   spinw/properties
-   spinw/methods
-   spinw/files
-   spinw/plot
-   spinw/pref
-   spinw/sym
-   spinw/overview
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: pySpinW Docs
-
-   pyspinw/installation
-   pyspinw/examples
-   pyspinw/overview
-   api/pySpinW
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: Resources
-
-   resources/faq
-   resources/publications
-   resources/presentations
-   resources/contact
+   spinw/index
+   pyspinw/index
+   resources/index
