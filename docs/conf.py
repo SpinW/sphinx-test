@@ -19,6 +19,12 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.autosummary",
     "sphinx.ext.napoleon",
+    "myst_parser",
+]
+
+myst_enable_extensions = [
+    "dollarmath",
+    "deflist",
 ]
 
 templates_path = ["_templates"]
