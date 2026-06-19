@@ -11,3 +11,6 @@ spacegroup_database.pickle
 .DS_Store
 .vscode/
 .idea/
+
+# AI Tools.
+CLAUDE.md
