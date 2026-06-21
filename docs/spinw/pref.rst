@@ -1,5 +1,10 @@
 SpinW Pref
 ==========
 
-This page will replace the SpinW preferences documentation from the current
-website.
+Reference documentation for the SpinW preferences class (swpref).
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   pref/*

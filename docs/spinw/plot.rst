@@ -1,5 +1,10 @@
 SpinW Plot
 ==========
 
-This page will replace the SpinW plotting documentation from the current
-website.
+Reference documentation for the SpinW plotting library (swplot).
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   plot/*

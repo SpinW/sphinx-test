@@ -1,4 +1,3 @@
-from __future__ import annotations
 
 import argparse
 import re
@@ -25,7 +24,14 @@ LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 HTML_IMG_RE = re.compile(r'<img\b[^>]*src=["\']([^"\']+)["\'][^>]*>', re.IGNORECASE)
 PRE_RE = re.compile(r'<pre class=["\'](?:codeinput|language-matlab)["\']>(.*?)</pre>', re.DOTALL)
 CODEOUTPUT_RE = re.compile(r'<pre class=["\']codeoutput["\']>(.*?)</pre>', re.DOTALL)
+PLAIN_PRE_RE = re.compile(r'<pre(?:\s[^>]*)?>(.*?)</pre>', re.DOTALL)
+HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
 HTML_TAG_RE = re.compile(r"<[^>]+>")
+HEADING_RE = re.compile(r'<h([1-6])\b[^>]*>(.*?)</h\1>', re.DOTALL | re.IGNORECASE)
+PARA_RE = re.compile(r"<p\b[^>]*>(.*?)</p>", re.DOTALL | re.IGNORECASE)
+LIST_RE = re.compile(r"<ul\b[^>]*>(.*?)</ul>", re.DOTALL | re.IGNORECASE)
+LIST_ITEM_RE = re.compile(r"<li\b[^>]*>(.*?)</li>", re.DOTALL | re.IGNORECASE)
+ANCHOR_RE = re.compile(r'<a\b[^>]*>(.*?)</a>', re.DOTALL | re.IGNORECASE)
 
 
 def parse_front_matter(text: str) -> tuple[dict[str, str], str]:
@@ -114,16 +120,93 @@ def html_img_to_myst(match: re.Match[str], tutorial_name: str | None) -> str:
     return f"```{{image}} {path}\n:alt: {alt}\n```"
 
 
+ENTITY_REPLACEMENTS = (
+    ("\u0026amp;", "&"),
+    ("\u0026lt;", "<"),
+    ("\u0026gt;", ">"),
+    ("\u0026quot;", '"'),
+    ("\u0026#39;", "'"),
+    ("\u0026times;", "x"),
+    ("\u0026reg;", "\u00ae"),
+)
+
+
+def unescape_html_entities(text: str) -> str:
+    for entity, char in ENTITY_REPLACEMENTS:
+        text = text.replace(entity, char)
+    return text
+
+
 def clean_matlab_html(text: str) -> str:
     text = re.sub(r"<span class=[\"'](?:string|keyword|comment)[\"']>(.*?)</span>", r"\1", text, flags=re.DOTALL)
-    text = text.replace("&times;", "x").replace("&reg;", "®").replace("&amp;", "&")
+    text = unescape_html_entities(text)
     return HTML_TAG_RE.sub("", text).strip()
 
 
+def clean_inline_html(text: str) -> str:
+    text = ANCHOR_RE.sub(lambda m: m.group(1).strip(), text)
+    text = re.sub(r"</?(?:b|strong)>", "**", text, flags=re.IGNORECASE)
+    text = re.sub(r"</?(?:i|em)>", "*", text, flags=re.IGNORECASE)
+    text = re.sub(r"<code>(.*?)</code>", r"`\1`", text, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r"<br\s*/?>", " ", text, flags=re.IGNORECASE)
+    text = HTML_TAG_RE.sub("", text)
+    text = unescape_html_entities(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def list_to_markdown(match: re.Match[str]) -> str:
+    items = LIST_ITEM_RE.findall(match.group(1))
+    lines = [f"- {clean_inline_html(item)}" for item in items]
+    return "\n" + "\n".join(lines) + "\n"
+
+
+def heading_to_markdown(match: re.Match[str]) -> str:
+    level = int(match.group(1))
+    text = clean_inline_html(match.group(2))
+    if not text:
+        return ""
+    # Demote the top-level tutorial heading so the page keeps a single H1.
+    prefix = "#" * max(level + 1, 2)
+    return f"\n\n{prefix} {text}\n\n"
+
+
 def convert_pre_blocks(text: str) -> str:
-    text = PRE_RE.sub(lambda m: f"```matlab\n{clean_matlab_html(m.group(1))}\n```", text)
-    text = CODEOUTPUT_RE.sub(lambda m: f"```text\n{clean_matlab_html(m.group(1))}\n```", text)
+    text = PRE_RE.sub(lambda m: f"\n\n```matlab\n{clean_matlab_html(m.group(1))}\n```\n\n", text)
+    text = CODEOUTPUT_RE.sub(lambda m: f"\n\n```text\n{clean_matlab_html(m.group(1))}\n```\n\n", text)
     return text
+
+
+def convert_tutorial_html(body: str) -> str:
+    # Remove trailing MATLAB source export and other HTML comments.
+    body = HTML_COMMENT_RE.sub("", body)
+    # Drop the auto-generated "Contents" navigation block.
+    body = re.sub(
+        r"<h2[^>]*>\s*Contents\s*</h2>\s*<div>.*?</div>",
+        "",
+        body,
+        flags=re.DOTALL | re.IGNORECASE,
+    )
+    # Code blocks first so their contents are not mangled by tag stripping.
+    body = convert_pre_blocks(body)
+    # Remaining plain <pre> blocks (e.g. the "Written by" footer).
+    body = PLAIN_PRE_RE.sub(
+        lambda m: f"\n\n```text\n{clean_matlab_html(m.group(1))}\n```\n\n", body
+    )
+    body = HEADING_RE.sub(heading_to_markdown, body)
+    body = LIST_RE.sub(list_to_markdown, body)
+    body = PARA_RE.sub(lambda m: f"\n\n{clean_inline_html(m.group(1))}\n\n", body)
+    # Strip remaining structural tags such as <div>/<span>.
+    body = re.sub(r"</?(?:div|span)[^>]*>", "", body, flags=re.IGNORECASE)
+    body = HTML_TAG_RE.sub("", body)
+    body = unescape_html_entities(body)
+    # Remove stray leading whitespace before MyST image fences.
+    body = re.sub(r"(?m)^[ \t]+(```\{image\})", r"\1", body)
+    # Ensure a blank line follows the closing image fence so trailing text is
+    # not parsed as directive content ("Has content, but none permitted").
+    body = re.sub(r"(?m)^(```\{image\}[^\n]*\n(?::[^\n]*\n)*```)\n(?=\S)", r"\1\n\n", body)
+    # Collapse excessive blank lines.
+    body = re.sub(r"\n{3,}", "\n\n", body)
+    return body.strip()
 
 
 def rewrite_link_target(target: str, mapping: dict[str, str]) -> str:
@@ -153,6 +236,43 @@ def rewrite_links(text: str, mapping: dict[str, str]) -> str:
     return LINK_RE.sub(replace, text)
 
 
+def promote_collection_headings(body: str) -> str:
+    """Normalise markdown headings so they nest under the prepended page H1.
+
+    Collection source pages take their title from front matter and start their
+    body sections at deeper levels (``###`` or ``####``). After we prepend a
+    ``#`` page title this creates a non-consecutive H1 -> H3/H4 jump. Shift the
+    whole heading tree so the shallowest body heading becomes H2 while keeping
+    the relative nesting intact.
+    """
+
+    heading_re = re.compile(r"(?m)^(#{1,6})(\s)")
+    fence_re = re.compile(r"(?m)^(```|~~~).*?^\1\s*$", re.DOTALL)
+
+    # Mask fenced code blocks so ``#`` lines inside them are not treated as
+    # headings (e.g. shell comments such as ``## TEST DATA``).
+    spans = [m.span() for m in fence_re.finditer(body)]
+
+    def in_code(pos: int) -> bool:
+        return any(start <= pos < end for start, end in spans)
+
+    levels = [len(m.group(1)) for m in heading_re.finditer(body) if not in_code(m.start())]
+    if not levels:
+        return body
+
+    shift = 2 - min(levels)
+    if shift == 0:
+        return body
+
+    def adjust(match: re.Match[str]) -> str:
+        if in_code(match.start()):
+            return match.group(0)
+        level = min(max(len(match.group(1)) + shift, 2), 6)
+        return "#" * level + match.group(2)
+
+    return heading_re.sub(adjust, body)
+
+
 def convert_text(path: Path, target_stem: str, mapping: dict[str, str], tutorial_name: str | None = None) -> str:
     metadata, body = parse_front_matter(path.read_text())
     label = label_from_metadata(metadata, target_stem)
@@ -161,11 +281,16 @@ def convert_text(path: Path, target_stem: str, mapping: dict[str, str], tutorial
     body = re.sub(r"{%\s*include\s+links\.html\s*%}", "", body)
     body = IMAGE_INCLUDE_RE.sub(image_include_to_myst, body)
     body = HTML_IMG_RE.sub(lambda m: html_img_to_myst(m, tutorial_name), body)
-    body = convert_pre_blocks(body)
+    if tutorial_name:
+        body = convert_tutorial_html(body)
+    else:
+        body = convert_pre_blocks(body)
     body = re.sub(r'<div id=["\']toc["\']></div>', "", body)
     body = re.sub(r"<script\b.*?</script>", "", body, flags=re.DOTALL | re.IGNORECASE)
     body = body.replace('<h1 class="text-center">Have fun!</h1>', '# Have fun!')
     body = rewrite_links(body, mapping)
+    if not tutorial_name:
+        body = promote_collection_headings(body)
     body = body.strip()
 
     return f"({label})=\n\n# {title}\n\n{body}\n"

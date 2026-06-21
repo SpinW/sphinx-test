@@ -1,5 +1,10 @@
 Class Methods
 =============
 
-This page will replace the SpinW class methods documentation from the current
-website.
+Reference documentation for the methods of the SpinW class.
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   methods/*

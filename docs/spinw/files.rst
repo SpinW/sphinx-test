@@ -1,4 +1,11 @@
 SpinW Files
 ===========
 
-This page will replace the SpinW files documentation from the current website.
+Reference documentation for the SpinW library files (swfiles).
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   files/*
+   files/functions/*
