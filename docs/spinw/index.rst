@@ -8,7 +8,6 @@ Documentation for the original MATLAB implementation of SpinW.
 
    installation
    tutorials
-   SpinW Issues <https://github.com/SpinW/spinw/issues>
    class
    properties
    methods
@@ -16,4 +15,4 @@ Documentation for the original MATLAB implementation of SpinW.
    plot
    pref
    sym
-   overview
+   SpinW Issues <https://github.com/SpinW/spinw/issues>

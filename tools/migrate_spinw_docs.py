@@ -304,6 +304,62 @@ def convert_collections(mapping: dict[str, str]) -> None:
             target.write_text(convert_text(source, source.stem, mapping))
 
 
+def _tutorial_sort_key(name: str) -> tuple[int, str]:
+    """Sort tutorialNN names by their numeric index when possible."""
+    m = re.match(r"tutorial(\d+)", name)
+    if m:
+        return (int(m.group(1)), name)
+    return (10**9, name)
+
+
+def write_tutorials_index() -> None:
+    """Generate docs/spinw/tutorials.md with a rich title+subtitle list.
+
+    Mirrors the legacy Jekyll ``tutorials.md`` which iterated over
+    ``site.tutorials`` and rendered each entry as a clickable title followed by
+    its subtitle. We keep an additional hidden ``toctree`` so Sphinx's sidebar
+    and prev/next navigation still works.
+    """
+    entries: list[tuple[str, str, str]] = []  # (slug, title, subtitle)
+    for tutorial_dir in sorted(TUTORIALS.glob("tutorial*"), key=lambda p: _tutorial_sort_key(p.name)):
+        sources = sorted(tutorial_dir.glob("*tutorial.md"))
+        if not sources:
+            continue
+        metadata, _ = parse_front_matter(sources[0].read_text())
+        title = metadata.get("title") or tutorial_dir.name
+        subtitle = metadata.get("subtitle", "").strip()
+        entries.append((tutorial_dir.name, title, subtitle))
+
+    lines: list[str] = []
+    lines.append("(tutorials)=")
+    lines.append("")
+    lines.append("# Tutorials")
+    lines.append("")
+    lines.append(
+        "These tutorials can help to understand quickly how SpinW works. "
+        "It is possible to download the MATLAB code of any tutorial using the "
+        "`grabcode` command with the tutorial URL."
+    )
+    lines.append("")
+    lines.append("```{toctree}")
+    lines.append(":maxdepth: 1")
+    lines.append(":hidden:")
+    lines.append(":glob:")
+    lines.append("")
+    lines.append("tutorials/tutorial*")
+    lines.append("```")
+    lines.append("")
+    for slug, title, subtitle in entries:
+        if subtitle:
+            lines.append(f"- [{title}](tutorials/{slug}) — {subtitle}")
+        else:
+            lines.append(f"- [{title}](tutorials/{slug})")
+    lines.append("")
+
+    target = ROOT / "docs" / "spinw" / "tutorials.md"
+    target.write_text("\n".join(lines).rstrip() + "\n")
+
+
 def convert_tutorials(mapping: dict[str, str]) -> None:
     target_dir = ROOT / "docs" / "spinw" / "tutorials"
     target_dir.mkdir(parents=True, exist_ok=True)
@@ -314,6 +370,7 @@ def convert_tutorials(mapping: dict[str, str]) -> None:
         source = sources[0]
         target = target_dir / f"{tutorial_dir.name}.md"
         target.write_text(convert_text(source, tutorial_dir.name, mapping, tutorial_dir.name))
+    write_tutorials_index()
 
 
 def main() -> None:
