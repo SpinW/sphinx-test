@@ -47,12 +47,9 @@ Calculations and spectroscopy
    calculations
    polarisation
    path
-
-.. note::
-
-   ``pyspinw.experiment``, ``pyspinw.instrument`` and ``pyspinw.measurement``
-   currently fail to import in the upstream package (broken relative imports);
-   they will be listed here once that is fixed.
+   experiment
+   instrument
+   measurement
 
 Symmetry and I/O
 ----------------
