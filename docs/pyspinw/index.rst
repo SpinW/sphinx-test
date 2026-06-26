@@ -4,9 +4,15 @@ pySpinW Docs
 Documentation for the Python implementation of SpinW.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+   :caption: User guide
 
    installation
-   examples
    overview
+   examples
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Reference
+
    ../api/pySpinW
