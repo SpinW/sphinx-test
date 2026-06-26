@@ -7,6 +7,6 @@ Project resources, references, and contact information.
    :maxdepth: 2
 
    faq
-   publications
+   citing
    presentations
    contact

@@ -79,3 +79,11 @@
   object-fit: contain;
   padding: 0;
 }
+
+.faq-question p {
+  font-size: 1.15rem;
+  line-height: 1.45;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+

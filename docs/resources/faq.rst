@@ -1,10 +1,13 @@
 F.A.Q.
 ======
 
-Those common questions.
+Those common questions
 
-When I calculate spin wave dispersion using the ``spinw.spinwave()`` function, I get the following error message: ``Hamiltonian matrix is not positive definite, ...``. What is wrong?
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.. container:: faq-question
+
+   **Q.** When I calculate spin wave dispersion using ``spinw.spinwave()``,
+   I get the following error message:
+   ``Hamiltonian matrix is not positive definite, ...``. What is wrong?
 
 The simple explanation is that the magnetic structure, stored in the
 ``spinw.mag_str`` field, is not the classical ground state of the magnetic
@@ -32,8 +35,12 @@ to ``true`` and ``mode`` option set to one. This can help to judge whether the
 imaginary part of the dispersion is due to numerical error or whether the
 proposed ground state is wrong.
 
-Why does the energy plot come up with positive and negative energy modes?
--------------------------------------------------------------------------
+----
+
+.. container:: faq-question
+
+   **Q.** Why does the energy plot come up with positive and negative energy
+   modes?
 
 The positive/negative spin wave modes belong to the one-magnon
 creation/annihilation processes. Thus every dispersion has a reflected version
@@ -42,11 +49,17 @@ ignore the negative energies in most cases. The number of the spin wave modes
 on the positive-energy side should be equal to the number of magnetic atoms in
 the magnetic supercell.
 
-When generating the magnetic structure using ``spinw.genmagstr()``, the program gives a warning: *"Warning: In the extended unit cell k is still larger than epsilon!"*. Do I have to be concerned about that?
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
-If you use the ``nExt`` parameter of ``spinw.genmagstr()`` with a value that is
-not equal to ``[1 1 1]`` and the ``mode`` option is set to ``helical``, the
+.. container:: faq-question
+
+   **Q.** When generating the magnetic structure using ``spinw.genmagstr()``,
+   the program gives the warning
+   *"In the extended unit cell k is still larger than epsilon!"*. Should I
+   worry?
+
+If you use the ``nExt`` parameter of ``spinw.genmagstr()`` with a value that
+is not equal to ``[1 1 1]`` and the ``mode`` option is set to ``helical``, the
 code checks whether the generated magnetic supercell has the right size to
 properly incorporate your helical magnetic structure. You can ignore the
 warning if ``nExt./k`` is close enough to an integer for your needs. For spin
