@@ -8,16 +8,21 @@ SpinWcore.
 - Source directory: `docs/`
 - Entry page: `docs/index.rst`
 - Config file: `docs/conf.py`
-- Theme: `alabaster`(default)
+- Theme: `pydata_sphinx_theme`
 - Extensions:
   - `sphinx.ext.autodoc` for the generated pySpinW API page
+  - `sphinx.ext.autosummary`
+  - `sphinx.ext.napoleon`
   - `sphinx.ext.mathjax` for equations
+  - `myst_parser` (with `dollarmath` and `deflist`) for Markdown sources
 - Custom CSS: `docs/_static/site.css`
 
 ## Customizations
 
-On top of the Alabaster default theme, the site customizes:
+On top of the pydata-sphinx-theme defaults, `site.css` styles homepage-specific
+elements:
 
-- sidebar logo sizing and hidden logo text
-- more visible sidebar section captions
-- brighter Flask-like code blocks
+- `project-cards` / `project-card` grid for the project tiles, with hover states
+- `project-logo` and `project-badges` layout inside each card
+- `partner-table` / `partner-logo` sizing for the partner logo grid
+- navbar spacing tweaks (`.bd-navbar-elements.navbar-nav`)
