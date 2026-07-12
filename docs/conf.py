@@ -45,8 +45,9 @@ html_theme = "pydata_sphinx_theme"
 
 html_theme_options = {
     "logo": {
-        "image_light": "_static/img/pyspinw_logo.png",
-        "image_dark": "_static/img/pyspinw_logo.png",
+        "image_light": "_static/img/spinw3_header.png",
+        "image_dark": "_static/img/spinw3_header.png",
+        "alt_text": "SpinW documentation",
     },
     "navbar_align": "content",
     "navbar_center": ["navbar-nav"],
@@ -71,6 +72,7 @@ html_sidebars = {
 }
 
 html_static_path = ["_static"]
+html_favicon = "_static/favicon.png"
 html_css_files = [
     "site.css",
 ]
