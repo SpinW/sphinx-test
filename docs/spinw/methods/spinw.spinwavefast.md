@@ -40,7 +40,7 @@ spec = tri.spinwave({[0 0 0] [1 1 0]})
 sw_plotspec(spec)
 ```
  
-```{image} /_static/img/generated/spinw_spinwav_1.png
+```{image} /_static/img/generated/spinw_spinwa_1.png
 :alt: sw_plotspec(spec)
 ```
   
