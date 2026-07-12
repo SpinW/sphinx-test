@@ -6,6 +6,7 @@ docs/_build/
 
 # Local / generated data
 spacegroup_database.pickle
+LocalNotes/
 
 # OS / editor
 .DS_Store
