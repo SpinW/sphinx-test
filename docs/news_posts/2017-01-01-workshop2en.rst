@@ -20,7 +20,7 @@ Place
 -----
 
 The workshop will be held at the
-`ISIS neutron source <http://www.isis.stfc.ac.uk/people/directions-to-isis6523.html>`_,
+ISIS neutron source,
 Rutherford Appleton Laboratory, U.K. Accommodation is available and booked for
 all participants at the on-site
 `Ridgeway House <http://www.stfc.ac.uk/about-us/where-we-work/rutherford-appleton-laboratory/ridgeway-house/>`_
