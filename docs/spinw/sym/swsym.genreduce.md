@@ -16,9 +16,9 @@ can generate the given list.
   
 `symOp`
 : Matrix that contains both the rotation and translation matrices
-  having dimensions of $$[3\times 4\times n_{sym}]$$, where the
+  having dimensions of $[3\times 4\times n_{sym}]$, where the
   `symMat(:,4,:)` stores the translation vectors, while the
-  `symMat(:,1:3,:)` stores the $$3\times 3$$ rotation matrices.
+  `symMat(:,1:3,:)` stores the $3\times 3$ rotation matrices.
   
 ## Output Arguments
   
@@ -27,7 +27,7 @@ can generate the given list.
  
 `isGen`
 : Vector, that gives whether a given input operator is part of
-  the generators, dimensions are $$[1\times n_{sym}]$$.
+  the generators, dimensions are $[1\times n_{sym}]$.
   
 ## See Also
   

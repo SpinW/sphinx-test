@@ -57,7 +57,7 @@ Optional inputs:
   
 `'pref'`
 : Defines prefactors as a vector for the symmetry allowed
-          components in a row vector with $$n_{symMat}$$ number of elements. Alternatively, if only
+          components in a row vector with $n_{symMat}$ number of elements. Alternatively, if only
           a few of the symmetry allowed matrices have non-zero
           prefactors, use:
   ```matlab
@@ -79,7 +79,7 @@ Optional inputs:
   In this case, these will be the prefactors of the 3
           antisymmetric symmetry allowed matrices. In case no crystal
           symmetry is defined, these will define directly the components
-          of the  DM interaction in the $$xyz$$ coordinate system. Be
+          of the  DM interaction in the $xyz$ coordinate system. Be
           carefull with the sign of the DM interaction, it depends on the
           order of the two interacting atoms! Default value is `{1}`.
           For anisotropy matrices antisymmetric matrices are not allowed.

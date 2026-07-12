@@ -14,7 +14,7 @@
 (RGB color code, mass, long name) in a struct. The element is identified
 by its short name, such as 'O' for oxygen. If the given atom name does
 not exists, the function returns the data for `'Unobtanium'`. The
-database is stored in the [atom.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'atom.dat'])) file.
+database is stored in the `atom.dat` file.
   
 `data = sw_atomdata(atomsymb,datatype)` returns only the requested type
 of data.

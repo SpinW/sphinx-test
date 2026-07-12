@@ -21,12 +21,12 @@ magnetic field. To optimize large number of spin angles
   
 The example determines the propagation vector of the ground state of the
 triangular lattice antiferromagnet. The magnetic structure is constrained
-to be planar in the $$xy$$-plane. The [gm_planard](#gm-planard) constraint function is
+to be planar in the $xy$-plane. The [gm_planard](#gm-planard) constraint function is
 used where the first 3 parameter determined the propagation vector,
 followed by the polar angles of the magnetic moments (here there is only
 1 magnetic moment in the unit cell) which is fixed to 0. Finally the last
 2 parameters corresponds to the polar angles of the normal to the
-spin-plane which is the $$z$$-axis ($$\theta=0$$, $$\varphi=0$$). The optimized
+spin-plane which is the $z$-axis ($\theta=0$, $\varphi=0$). The optimized
 magnetic structure is plotted.
  
 ```matlab
@@ -64,7 +64,7 @@ plot(tri)
   ```matlab
   [M, k, n] = @(x)func(M0, x)
   ```
- here `M` is matrix with dimensions of $$[3\times n_{magExt}]$$, `k` is the
+ here `M` is matrix with dimensions of $[3\times n_{magExt}]$, `k` is the
  propagation vector (row vector with 3 elements), `n` is the normal vector
  of the spin rotation plane (row vector with 3 elements). The
  default value is `@gm_spherical3d`. For planar magnetic structures
@@ -91,7 +91,7 @@ plot(tri)
   
 `'epsilon'`
 : The smallest value of incommensurability that is tolerated
-  without warning. Default value is $$10^{-5}$$.
+  without warning. Default value is $10^{-5}$.
   
 `'nRun'`
 : Number of runs. If random starting parameters are given, the
@@ -128,29 +128,29 @@ Matlab built-in optimizer [fminsearch](https://www.mathworks.com/help/matlab/ref
  
 `'tolx'`
 : Minimum change of `x` when convergence reached, default
-    value is $$10^{-4}$$.
+    value is $10^{-4}$.
   
 `'tolfun'`
-: Minimum change of the $$R$$ value when convergence reached,
-    default value is $$10^{-5}$$.
+: Minimum change of the $R$ value when convergence reached,
+    default value is $10^{-5}$.
   
 `'maxfunevals'`
 : Maximum number of function evaluations, default value
-    is $$10^7$$.
+    is $10^7$.
   
 `'maxiter'`
-: Maximum number of iterations, default value is $$10^4$$.
+: Maximum number of iterations, default value is $10^4$.
   
 ## Output Arguments
   
 `optm`
 : Struct type variable with the following fields:
   * `obj`       spinw object that contains the optimised magnetic structure.
-  * `x`         Optimised paramters in a row vector with $$n_{par}$$ number
+  * `x`         Optimised paramters in a row vector with $n_{par}$ number
                 of elements.
   * `fname`     Name of the contraint function.
-  * `xname`     Cell containing the name of the $$x$$ parameters with
-                  $$n_{par}$$ elements.
+  * `xname`     Cell containing the name of the $x$ parameters with
+                  $n_{par}$ elements.
   * `e`         Energy per spin in the optimised structure.
   * `exitflag`  Exit flag of the optimisation code, see [fminsearch](https://www.mathworks.com/help/matlab/ref/fminsearch.html).
   * `output`    Detailed output of the optimisation code, see [fminsearch](https://www.mathworks.com/help/matlab/ref/fminsearch.html).

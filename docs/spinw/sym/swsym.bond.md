@@ -25,7 +25,7 @@ tolerance using `tol`.
   
 `r`
 : Positions of the magnetic atoms in lattice units stored in a matrix
-  with dimensions of $$[3\times n_{magAtom}]$$.
+  with dimensions of $[3\times n_{magAtom}]$.
   
 `bv`
 : Basis vectors that define the lattice, used for checking the bond
@@ -40,10 +40,10 @@ tolerance using `tol`.
   
 `symOp`
 : Matrix, that contains the rotation and translation operators of
-  the space group with dimensions of $$[3\times 4\times n_{op}]$$.
+  the space group with dimensions of $[3\times 4\times n_{op}]$.
   
 `tol`
-: Tolerance, default value is $$10^{-5}$$.
+: Tolerance, default value is $10^{-5}$.
   
 ## Output Arguments
   

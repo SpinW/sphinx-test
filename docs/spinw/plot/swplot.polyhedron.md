@@ -25,8 +25,8 @@ patch object.
 ## Input Arguments
   
 `vertices`
-: Matrix with dimensions of $$[3\times n_{obj}\times n_{point}]$$, where
-  $$n_{obj}$$ is the number of polyhedra to draw, $$n_{point}$$ is the number
+: Matrix with dimensions of $[3\times n_{obj}\times n_{point}]$, where
+  $n_{obj}$ is the number of polyhedra to draw, $n_{point}$ is the number
   of vertices per polyhedron.
   
 ## See Also

@@ -10,7 +10,7 @@
 ## Description
   
 `field(obj,B)` sets the magnetic field stored in `obj.single_ion.field`
-to `B`, where `B` is a $$[1\times 3]$$ vector.
+to `B`, where `B` is a $[1\times 3]$ vector.
    
 `B = field(obj)` returns the current value of the magnetic field value
 stored in `obj`.

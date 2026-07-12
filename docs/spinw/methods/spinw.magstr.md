@@ -19,7 +19,7 @@ warning is triggered.
 ## Example
  
 The example shows the equivalent represenation of a simple spin helix in
-the $$ab$$-plane using Fourier components of the magnetization and using
+the $ab$-plane using Fourier components of the magnetization and using
 the rotating frame. The complex magnetization in the Fourier
 representation is converted into a real spin vector and a normal vector
 that defines the axis of rotation.

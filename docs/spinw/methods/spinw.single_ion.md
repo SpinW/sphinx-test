@@ -5,14 +5,14 @@
 ## Sub fields
  
 `aniso`
-: Row vector that contains $$n_{magatom}$$ integers, each integer
+: Row vector that contains $n_{magatom}$ integers, each integer
   assignes one of the matrices from the [spinw.matrix](#spinw-matrix) property
   to a magnetic atom in the generated [spinw.matom](#spinw-matom) list as a single
   ion anisotropy. Zero value of `aniso` means no single ion
   anisotropy for the corresponding magnetic atom.
  
 `g`
-: Row vector with $$n_{magatom}$$ integers, each integer
+: Row vector with $n_{magatom}$ integers, each integer
   assignes one of the matrices from the [spinw.matrix](#spinw-matrix) property
   to a magnetic atom in the spinw.matom list as a
   g-tensor. Zero value of `g` means a default g-value of 2 for

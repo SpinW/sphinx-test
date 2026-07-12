@@ -21,7 +21,7 @@ the figure handle `hFigure`.
   
 `hAdd`
 : Either vector of the handles of the graphical objects, or
-  struct with $$n_{obj}$$ number of elements with a `handle` field each
+  struct with $n_{obj}$ number of elements with a `handle` field each
   containing a graphical object handle. The struct can contain any subset
   of the following fields as well:
   * `name`      Default value is `'general'` if not given. The

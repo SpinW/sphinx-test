@@ -77,7 +77,7 @@ Here the imported `dat` variable will contain the fields `tag`, `Q`,
 `ENlim`, `I`, `EN` and `s` and it will have 7 entry. The `tag` variable
 will contain the `'[Mxx] [1 0 0]'` string for the first 4 entries and
 `'[Myy] [1 0 0]'` for the last 3 entries. For example the field `Q` has 3
-elements per entry and the last command above extracts all $$Q$$ points
+elements per entry and the last command above extracts all $Q$ points
 into a matrix.
   
 ## Input Arguments

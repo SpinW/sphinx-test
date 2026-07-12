@@ -27,7 +27,7 @@ includes the site occupancy and Debye-Waller factors calculated from
      factor is to be calculated. For commensurate structures these
      are the possible positions of the magnetic Bragg peaks. For
      incommensurate helical/conical structures 3 Bragg peaks
-     positions are possible: $$(\mathbf{k}-\mathbf{k}_m,\mathbf{k},\mathbf{k}+\mathbf{k}_m) around every reciprocal
+     positions are possible: $(\mathbf{k}-\mathbf{k}_m,\mathbf{k},\mathbf{k}+\mathbf{k}_m)$ around every reciprocal
      lattice vector. In this case still the integer positions have
      to be given and the code calculates the intensities at all
      three points.
@@ -53,7 +53,7 @@ includes the site occupancy and Debye-Waller factors calculated from
   `obj.unit_cell.ff(1,:,atomIndex)`. Default value is `false`.
  
 `'formfactfun'`
-: Function that calculates the magnetic form factor for given $$Q$$ value.
+: Function that calculates the magnetic form factor for given $Q$ value.
   value. Default value is `@sw_mff`, that uses a tabulated coefficients
   for the form factor calculation. For anisotropic form factors a user
   defined function can be written that has the following header:
@@ -62,10 +62,10 @@ includes the site occupancy and Debye-Waller factors calculated from
   ```
   where the parameters are:
   * `F`           row vector containing the form factor for every input 
-                  $$Q$$ value
+                  $Q$ value
   * `atomLabel`   string, label of the selected magnetic atom
-  * `Q`           matrix with dimensions of $$[3\times n_Q]$$, where each
-                  column contains a $$Q$$ vector in $$Å^{-1}$$ units.
+  * `Q`           matrix with dimensions of $[3\times n_Q]$, where each
+                  column contains a $Q$ vector in $Å^{-1}$ units.
  
 `'gtensor'`
 : If true, the g-tensor will be included in the structure factor
@@ -73,11 +73,11 @@ includes the site occupancy and Debye-Waller factors calculated from
   g-tensor for different ions is only possible here.
  
 `'lambda'`
-: Wavelength. If given, the $$2\theta$$ value for each reflection
+: Wavelength. If given, the $2\theta$ value for each reflection
   is calculated.
   
 `'dmin'`
-: Minimum $$d$$-value of a reflection, all higher order
+: Minimum $d$-value of a reflection, all higher order
   reflections will be removed from the results.
   
 `'output'`
@@ -91,7 +91,7 @@ includes the site occupancy and Debye-Waller factors calculated from
 : Tolerance of the incommensurability of the magnetic
   ordering wavevector. Deviations from integer values of the
   ordering wavevector smaller than the tolerance are considered
-  to be commensurate. Default value is $$10^{-4}$$.
+  to be commensurate. Default value is $10^{-4}$.
   
 `'fitmode'`
 : Speed up the calculation for fitting mode (omitting
@@ -110,18 +110,18 @@ includes the site occupancy and Debye-Waller factors calculated from
 `sFact`
 : Structure with the following fields:
    * `F2`     Magnetic structure factor in a matrix with dimensions
-              $$[3\times n_{hkl}]$$.
+              $[3\times n_{hkl}]$.
    * `Mk`     Square of the 3 dimensional magnetic structure factor,
               dimensions are:
-              $$[n_{ext}(1)\cdot f_{ext}(1)\times n_{ext}(2)\cdot f_{ext}(2)\times n_{ext}(3)\cdot f_{ext}(3)]$$,
-              where $$n_{ext}$$ is the size of the extended unit cell.
-   * `hkl`    Contains the input $$Q$$ values in a matrix with dimensins of $$[3\times n_{hkl}]$$.
-   * `hklA`   Same as `hkl`, but in Å$$^{-1}$$ units in the
-              $$xyz$$ Cartesian coordinate system.
+              $[n_{ext}(1)\cdot f_{ext}(1)\times n_{ext}(2)\cdot f_{ext}(2)\times n_{ext}(3)\cdot f_{ext}(3)]$,
+              where $n_{ext}$ is the size of the extended unit cell.
+   * `hkl`    Contains the input $Q$ values in a matrix with dimensins of $[3\times n_{hkl}]$.
+   * `hklA`   Same as `hkl`, but in Å$^{-1}$ units in the
+              $xyz$ Cartesian coordinate system.
    * `incomm` Whether the spectra calculated is incommensurate or not.
    * `formfact` Cell containing the labels of the magnetic ions if form
               factor in included in the spin-spin correlation function.
-   * `{tth}`  $$2\theta$$ value of the reflection for the given wavelength,
+   * `{tth}`  $2\theta$ value of the reflection for the given wavelength,
               only given if a wavelength is provided.
    * `obj`    Clone of the input `obj` object.
  

@@ -26,7 +26,7 @@ intensity for non-resonant inelastic x-ray scattering on phonons.
   stored in `obj.unit_cell.ff(1,:,atomIndex)`. Default value is `false`.
  
 `'formfactfun'`
-: Function that calculates the magnetic form factor for given $$Q$$ value.
+: Function that calculates the magnetic form factor for given $Q$ value.
   value. Default value is `@sw_mff`, that uses a tabulated coefficients
   for the form factor calculation. For anisotropic form factors a user
   defined function can be written that has the following header:
@@ -35,10 +35,10 @@ intensity for non-resonant inelastic x-ray scattering on phonons.
   ```
   where the parameters are:
   * `F`           row vector containing the form factor for every input 
-                  $$Q$$ value
+                  $Q$ value
   * `atomLabel`   string, label of the selected magnetic atom
-  * `Q`           matrix with dimensions of $$[3\times n_Q]$$, where each
-                  column contains a $$Q$$ vector in $$Å^{-1}$$ units.
+  * `Q`           matrix with dimensions of $[3\times n_Q]$, where each
+                  column contains a $Q$ vector in $Å^{-1}$ units.
  
 `'fid'`
 : Defines whether to provide text output. The default value is determined
@@ -54,9 +54,9 @@ intensity for non-resonant inelastic x-ray scattering on phonons.
 : Structure that is same as the input with the following additional
   fields:
   * `param`   Input parameters.
-  * `Sperp`   $$S_\perp(i_{mode},\mathbf{Q})$$ x-ray scattering cross
+  * `Sperp`   $S_\perp(i_{mode},\mathbf{Q})$ x-ray scattering cross
               section, stored in a matrix with dimensions of
-              $$[n_{mode n_{hkl}]$$.
+              $[n_{mode n_{hkl}]$.
   
 ## See Also
   

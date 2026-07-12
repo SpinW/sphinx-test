@@ -33,7 +33,7 @@ crystal.genlattice('lat_const',[3 3 4],'angled',[90 90 120],'spgr','-y,x-y,z; -x
 ```
  
 The three lines are equivalent, both will create hexagonal lattice, with
-$$P6$$ space group.
+$P6$ space group.
  
 ## Input
  
@@ -43,27 +43,27 @@ $$P6$$ space group.
 ## Options
   
 `angled`
-: `[α, β, γ]` angles in °, dimensions are $$[1\times 3]$$.
+: `[α, β, γ]` angles in °, dimensions are $[1\times 3]$.
   
 `angle`
-: `[α, β, γ]` angles in radian, dimensions are $$[1\times 3]$$.
+: `[α, β, γ]` angles in radian, dimensions are $[1\times 3]$.
   
 `lat_const`
 : `[a, b, c]` lattice parameters in units defined in [spinw.unit](#spinw-unit) (with Å
-  being the default), dimensions are $$[1\times 3]$$.
+  being the default), dimensions are $[1\times 3]$.
   
 `spgr`
 : Defines the space group. Can have the following values:
  
   * **space group label** string, name of the space group, can be any
-    label defined in the [symmetry.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'symmetry.dat'])) file.
-  * **space group index** line number in the [symmetry.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'symmetry.dat'])) file.
+    label defined in the `symmetry.dat` file.
+  * **space group index** line number in the `symmetry.dat` file.
   * **space group operators** matrix with dimensions 
-    $$[3\times 4\times n_{op}]$$.
+    $[3\times 4\times n_{op}]$.
     
-  The [symmetry.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'symmetry.dat'])) file stores definition of the 230 space groups in
+  The `symmetry.dat` file stores definition of the 230 space groups in
   standard settings as it is in the [International Tables of Crystallography](http://it.iucr.org/A/).
-  Additional lines can be added to the [symmetry.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'symmetry.dat'])) file using the
+  Additional lines can be added to the `symmetry.dat` file using the
   [swsym.add](#swsym-add) function which later can be used in the `spgr` option.
   
   If the `spgr` option is 0, no symmetry will be used. The
@@ -74,7 +74,7 @@ $$P6$$ space group.
 : Optional label for the space group if the generators are given in the
   `spgr` option.
 `bv`
-: Basis vectors given in a matrix with dimensions of $$[3\times 3]$$, where
+: Basis vectors given in a matrix with dimensions of $[3\times 3]$, where
   each column defines a basis vector.
   
 `origin`

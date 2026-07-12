@@ -47,9 +47,9 @@ options can be added without the group name.
   
 `'range'`
 : Plotting range of the lattice parameters in lattice units,
-  in a matrix with dimensions of $$[3\times 2]$$. For example to plot the
+  in a matrix with dimensions of $[3\times 2]$. For example to plot the
   first unit cell, use: `[0 1;0 1;0 1]`. Also the number unit cells can
-  be given along the $$a$$, $$b$$ and $$c$$ directions, e.g. `[2 1 2]`, this is
+  be given along the $a$, $b$ and $c$ directions, e.g. `[2 1 2]`, this is
   equivalent to `[0 2;0 1;0 2]`. Default value is the single unit cell.
   
 `'unit'`
@@ -71,7 +71,7 @@ options can be added without the group name.
   
 `'nMesh'`
 : Resolution of the ellipse surface mesh. Integer number that is
-  used to generate an icosahedron mesh with $$n_{mesh}$$ number of
+  used to generate an icosahedron mesh with $n_{mesh}$ number of
   additional triangulation, default value is stored in
   `swpref.getpref('nmesh')`.
   

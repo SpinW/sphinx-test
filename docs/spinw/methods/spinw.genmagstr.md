@@ -97,10 +97,10 @@ plot(USb,'range',[1 1 1])
  
     $$\mathbf{S}^{gen}_i(\mathbf{r}) = R(2 \pi \mathbf{k_m} \cdot \mathbf{r})\cdot \mathbf{S}_i$$
  
-    where $$S_i$$ has either a single moment or as many moments
+    where $S_i$ has either a single moment or as many moments
           as the number of magnetic atoms in the crystallographic
-          cell. In the first case $$r$$ denotes the atomic
-          positions, while for the second case $$r$$ denotes the
+          cell. In the first case $r$ denotes the atomic
+          positions, while for the second case $r$ denotes the
           position of the origin of the cell.
   * `'rotate'` (reads `S`, `n`, `k`)
           uniform rotation of all magnetic moments with a
@@ -118,7 +118,7 @@ plot(USb,'range',[1 1 1])
     ```matlab
     [S, k, n] = @(x)func(S0, x)
     ```  
-    where `S` is matrix with dimensions of $$[3\times n_{magExt}]$$. `k` is
+    where `S` is matrix with dimensions of $[3\times n_{magExt}]$. `k` is
           the propagation vector in a 3-element row vector. `n` is the
           normal vector of the spin rotation plane also 3-element row
           vector. The default value for `func` is `@gm_spherical3d`. For planar
@@ -140,7 +140,7 @@ plot(USb,'range',[1 1 1])
   
 `'nExt'`
 : Size of the magnetic supercell in multiples of the
-  crystallographic cell, dimensions are $$[1\times 3]$$. Default value is
+  crystallographic cell, dimensions are $[1\times 3]$. Default value is
   stored in `obj`. If `nExt` is a single number, then the size of the
   extended unit cell is automatically determined from the first
   magnetic ordering wavevector. E.g. if `nExt = 0.01`, then the number
@@ -149,7 +149,7 @@ plot(USb,'range',[1 1 1])
   0.01 rlu tolerance.
   
 `'k'`
-: Magnetic ordering wavevector in rlu, dimensions are $$[n_K\times 3]$$.
+: Magnetic ordering wavevector in rlu, dimensions are $[n_K\times 3]$.
   Default value is defined in `obj`.
   
 `'n'`
@@ -158,9 +158,9 @@ plot(USb,'range',[1 1 1])
   coordinate system of the vector is determined by `unit`.
   
 `'S'`
-: Vector values of the spins (expectation value), dimensions are $$[3\times n_{spin} n_K]$$.
-  Every column defines the three $$(S_x, S_y, S_z)$$ components of
-  the spin (magnetic moment) in the $$xyz$$ Descartes coodinate system or
+: Vector values of the spins (expectation value), dimensions are $[3\times n_{spin} n_K]$.
+  Every column defines the three $(S_x, S_y, S_z)$ components of
+  the spin (magnetic moment) in the $xyz$ Descartes coodinate system or
   in lu. Default value is stored in `obj`.
   
 `'unit'`
@@ -175,7 +175,7 @@ plot(USb,'range',[1 1 1])
   
 `'epsilon'`
 : The smalles value of incommensurability that is
-  tolerated without warning in lattice units. Default is $$10^{-5}$$.
+  tolerated without warning in lattice units. Default is $10^{-5}$.
   
 `'func'`
 : Function handle that produces the magnetic moments, ordering wave
@@ -184,13 +184,13 @@ plot(USb,'range',[1 1 1])
   ```matlab
   [M, k, n] = @(x)func(M0,x)
   ```
-  where `M` is a matrix with dimensions of $$[3\times n_{magExt}]$$, `k` is
+  where `M` is a matrix with dimensions of $[3\times n_{magExt}]$, `k` is
   the propagation vector, `n` is the normal vector of the spin rotation
   plane. The default function is [gm_spherical3d](#gm-spherical3d). For planar magnetic
   structure use [gm_planar](#gm-planar).
   
 `'x0'`
-: Input parameters for `func` function, row vector with $$n_X$$ number of
+: Input parameters for `func` function, row vector with $n_X$ number of
   elements.
   
 `'norm'`

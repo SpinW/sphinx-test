@@ -16,7 +16,7 @@ rotation matrices of the point group.
   
 `symOp`
 : Symmetry operators of the space group stored in a matrix
-  with dimensions of $$[3\times 4\times n_{op}]$$.
+  with dimensions of $[3\times 4\times n_{op}]$.
   
 `r`
 : Column vector with 3 elements, position in the unit cell.
@@ -24,8 +24,8 @@ rotation matrices of the point group.
 ## Output Arguments
   
 `pOp`
-: Point group operators in a matrix with dimensions of $$[3\times 3\times
-  n_{op}]$$, the operators act on the relative atomic positions. To
+: Point group operators in a matrix with dimensions of $[3\times 3\times
+  n_{op}]$, the operators act on the relative atomic positions. To
   convert these rotation operators to Cartesian coordinate system, use:
  
   ```matlab

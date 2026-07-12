@@ -21,20 +21,20 @@ are normalized to Z.
   whitespace, the first word will be used as input.
   
 `Q`
-: Momentum transfer in Å$$^{-1}$$ units in a matrix with dimensions of
-  $$[1\times n_Q]$$ or $$[3\times n_Q]$$, optional.
+: Momentum transfer in Å$^{-1}$ units in a matrix with dimensions of
+  $[1\times n_Q]$ or $[3\times n_Q]$, optional.
   
 ## Output Arguments
   
 `formFactVal`
-: Value of form factor, evaluated at the $$Q$$ points if $$Q$$ is
+: Value of form factor, evaluated at the $Q$ points if $Q$ is
               defined.
  
 `coeff`
 : Form factor coefficients according to the following
               formula:
-                  $$f_0(Q_s) = c + \sum_{i=1}^5 a_i\cdot \exp(-b_i Q_s^2)$$,
-              where $$Q_s = \frac{Q}{4*\pi}$$ and $$[a_1, b_1, a_2, b_2, ... c]$$ are the
+                  $f_0(Q_s) = c + \sum_{i=1}^5 a_i\cdot \exp(-b_i Q_s^2)$,
+              where $Q_s = \frac{Q}{4*\pi}$ and $[a_1, b_1, a_2, b_2, ... c]$ are the
               coefficients.
   
 ## See Also

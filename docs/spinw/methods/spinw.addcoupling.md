@@ -14,7 +14,7 @@ matrix) to a given bond after bonds are generated using
   
 ## Examples
   
-To add the $$J_1$$ diagonal matrix to all second neighbor bonds
+To add the $J_1$ diagonal matrix to all second neighbor bonds
 between magnetic atoms use the following:
  
 ```matlab

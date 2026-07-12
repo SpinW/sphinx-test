@@ -17,11 +17,11 @@ generated list in [spinw.cache](#spinw-cache).
 `mAtomList`
 : structure with the following fields:
   * `r`   Position of the magnetic atoms in a matrix with dimensions of 
-    $$[3\times n_{magAtom}]$$.
+    $[3\times n_{magAtom}]$.
   * `idx` Index in the symmetry inequivalent atom list [spinw.unit_cell](#spinw-unit-cell) 
-    stored in a row vector with $$n_{magAtom}]$$ number of elements.
+    stored in a row vector with $n_{magAtom}]$ number of elements.
   * `S`   Spin of the magnetic atoms stored in a row vectorwith
-    $$n_{magAtom}]$$ number of elements.
+    $n_{magAtom}]$ number of elements.
   
 ## See Also
   

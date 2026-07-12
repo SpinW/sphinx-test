@@ -10,7 +10,7 @@
   
 `Mout = sw_resconv(M,x,dx,func)` convolutes a 2D matrix with a Gaussian
 along the first dimension of the matrix. The convolution keeps the
-integrated intensity $$\sum I\cdot dx$$ constant. It assumes the `x` vector
+integrated intensity $\sum I\cdot dx$ constant. It assumes the `x` vector
 contains the center points of the bins and the distances between the
 generated bin edges is calculated by interpolating from the distances
 between the given `x` bin center positions.
@@ -18,7 +18,7 @@ between the given `x` bin center positions.
 ## Input Arguments
   
 `M`
-: Arbitrary matrix with dimensions of $$[m_1\times m_2]$$.
+: Arbitrary matrix with dimensions of $[m_1\times m_2]$.
   
 `x`
 : Column vector of coordinates along the first dimension of the
@@ -26,15 +26,15 @@ between the given `x` bin center positions.
   
 `dx`
 : FWHM value of the Gaussian as a
-  function of $$dx$$. Either a function handle with a header `fwhm =
+  function of $dx$. Either a function handle with a header `fwhm =
   dx(xVal)` or a vector of polynomial coefficients that produces the
   right standard deviation. In this case in the function the following
   line will be executed `fwhm = polyval(dx,xVal)` or a constant FWHM
   value.
  
   The standard deviation of the Gaussian is calculated from the given
-  $$dx$$ value using the formula $$\sigma_G = fwhm_G/2/\sqrt{2\cdot log(2)}
-  \sim fwhm_G\cdot 0.424661$$
+  $dx$ value using the formula $\sigma_G = fwhm_G/2/\sqrt{2\cdot log(2)}
+  \sim fwhm_G\cdot 0.424661$
   If a general resolution function is provided in the `func` argument,
   it will be called as `y = func(x,[1 x0 fwhm])`. In this case the `fwhm`
   can be a row vector and the meaning of the different parameters will

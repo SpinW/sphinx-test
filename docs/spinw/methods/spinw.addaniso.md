@@ -9,7 +9,7 @@
 ## Description
   
 `addaniso(obj, matrixIdx, {atomTypeIdx}, {atomIdx})` assigns the
-$$[3\times 3]$$ matrix selected by `matrixIdx` (using either the matrix
+$[3\times 3]$ matrix selected by `matrixIdx` (using either the matrix
 label or matrix index) to the magnetic sites selected by `atomTypeIdx`
 that can contain a name of an atom or its atom index (see [spinw.atom](#spinw-atom)).
 If `atomTypeIdx` is not defined, anisotropy will be assigned to all
@@ -17,8 +17,8 @@ magnetic atoms.
   
 ## Examples
   
-To show the effect of a fourfold axis on anisotropy, we add $$A_1$$
-easy-axis anisotropy to atoms at $$(1/4,1/4,1/2)$$ and plot the result. The
+To show the effect of a fourfold axis on anisotropy, we add $A_1$
+easy-axis anisotropy to atoms at $(1/4,1/4,1/2)$ and plot the result. The
 3D plot shows anistropy using ellipsoid around the magnetic atoms.
  
 ```matlab
@@ -52,7 +52,7 @@ plot(cryst)
 : String or cell of strings that select magnetic atoms by
   their label. Also can be a vector that contains integers, the index of
   the magnetic atoms in `obj.unit_cell`, with all symmetry equivalent
-  atoms. Maximum value is $$n_{atom}$$, if undefined anisotropy is assigned to
+  atoms. Maximum value is $n_{atom}$, if undefined anisotropy is assigned to
   all magnetic atoms. Optional.
  
 `atomIdx`

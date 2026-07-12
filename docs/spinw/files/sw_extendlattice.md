@@ -35,8 +35,8 @@ and bonds between atoms in different supercells.
   
 `aList`
 : Parameters of the magnetic atoms in a struct with the following fields:
-  * `RRext` Positions of magnetic atoms in lattice units of the supercell stored in a matrix with dimensions of $$[3\times n_{magExt}]$$.
-  * `Sext`  Spin length of the magnetic atoms in a row vector with $$n_{magExt}$$ number of elements.
+  * `RRext` Positions of magnetic atoms in lattice units of the supercell stored in a matrix with dimensions of $[3\times n_{magExt}]$.
+  * `Sext`  Spin length of the magnetic atoms in a row vector with $n_{magExt}$ number of elements.
  
 `SSext`
 : Interaction matrix in the extended unit cell, struct type.
@@ -46,7 +46,7 @@ and bonds between atoms in different supercells.
 	* `iso`     Isotropic exchange interactions.
 	* `ani`     Anisotropic exchange interations.
 	* `dm`      Dzyaloshinsky-Moriya interaction terms.
-	* `gen`     General $$[3\times 3]$$ matrix contains the exchange interaction.
+	* `gen`     General $[3\times 3]$ matrix contains the exchange interaction.
   
 ## See Also
   

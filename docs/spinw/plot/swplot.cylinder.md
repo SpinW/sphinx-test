@@ -17,7 +17,7 @@ with a single triangular patch command. The cylinders are defined by
 start and end positions and their radii.
    
 `hPatch = swplot.cylinder(rStart, rEnd, R, nPatch, close)` creates 
-cylinders with $$4 n_{patch}$$ number of patch faces per arrow.
+cylinders with $4 n_{patch}$ number of patch faces per arrow.
    
 Handle can be the handle of an axes object or a patch object. It either
 selects an axis to plot or a patch object (triangulated) to add vertices
@@ -25,7 +25,7 @@ and faces.
    
 ## Examples
  
-Draw 100 random cylinders within the $$(\pm 1,\pm 1,\pm 1)$$ cube:
+Draw 100 random cylinders within the $(\pm 1,\pm 1,\pm 1)$ cube:
  
 ```matlab
 swplot.figure
@@ -47,11 +47,11 @@ swplot.zoom(30)
   
 `rStart`
 : Coordinate of the starting point or multiple starting points in a
-  matrix with dimensions $$[3\times n_{obj}]$$.
+  matrix with dimensions $[3\times n_{obj}]$.
   
 `rEnd`
 : Coordinate of the end point or multiple end points in a
-  matrix with dimensions $$[3\times n_{obj}]$$.
+  matrix with dimensions $[3\times n_{obj}]$.
   
 `R`
 : Radius of the arrow body, scalar.
@@ -59,7 +59,7 @@ swplot.zoom(30)
 `nPatch`
 : Number of points on the circle of the body, default value is stored in
   `swpref.getpref('npatch')`. The final patch object will have
-  $$4n_{patch}$$ number of faces and $$2n_{patch}$$ number of vertices.
+  $4n_{patch}$ number of faces and $2n_{patch}$ number of vertices.
   
 `close`
 : If `true` the cylinder is closed at both ends. Default is `true`.

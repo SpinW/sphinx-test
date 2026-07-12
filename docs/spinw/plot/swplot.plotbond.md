@@ -151,14 +151,14 @@ functions.
 : Unit in which the plotting range is defined. It can be one of the
   following strings:
   * `'lu'`        plot range is defined in lattice units (default),
-  * `'xyz'`       plot range is defined in the $$xyz$$ Cartesian coordinate
+  * `'xyz'`       plot range is defined in the $xyz$ Cartesian coordinate
                   system in Å units.
  
 `'range'`
 : Defines the plotting range. Depending on the `unit` parameter, the
-  given range can be in lattice units or in units of the $$xyz$$ Cartesian
-  coordinate system. It is either a matrix with dimensions of $$[3\times
-  2]$$ where the first and second columns define the lower and upper plot
+  given range can be in lattice units or in units of the $xyz$ Cartesian
+  coordinate system. It is either a matrix with dimensions of $[3\times
+  2]$ where the first and second columns define the lower and upper plot
   limits respectively. It can be alternatively a vector with three
   elements `[a,b,c]` which is equivalent to `[0 a;0 b;0 c]`. Default
   value is `[0 1;0 1;0 1]` to show a single cell.
@@ -199,7 +199,7 @@ functions.
   
 `nMesh`
 : Mesh of the ellipse surface, a triangulation class object or an
-  integer that used to generate an icosahedron mesh with $$n_{mesh}$$
+  integer that used to generate an icosahedron mesh with $n_{mesh}$
   number of additional subdivision into triangles. Default value is
   stored in `swpref.getpref('nmesh')`, see also [swplot.icomesh](#swplot-icomesh).
   

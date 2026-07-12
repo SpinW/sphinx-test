@@ -20,7 +20,7 @@ problem.
   
 `'hkl'`
 : Symbolic definition of positions in momentum space. Default value is
-  the general $$Q$$ point:
+  the general $Q$ point:
   ```matlab
   hkl = [sym('h') sym('k') sym('l')]
   ```

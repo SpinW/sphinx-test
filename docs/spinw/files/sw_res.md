@@ -22,7 +22,7 @@ figure if `plot` is true.
 ## Examples
   
 This example shows how to fit a tabulated resolution data (MERLIN energy
-resolution for $$E_i=50$$ meV and 300 Hz chopper frequency). Using the
+resolution for $E_i=50$ meV and 300 Hz chopper frequency). Using the
 fitted polynomial, the energy resolution can be calculated at an
 arbitrary energy transfer value.
  
@@ -75,10 +75,10 @@ dE =
 ## Output Arguments
   
 `p`
-: The coefficients for a polynomial $$p(x)$$ of degree $$n$$
+: The coefficients for a polynomial $p(x)$ of degree $n$
   that is a best fit (in a least-squares sense) for the resolution data.
-  The coefficients in $$p$$  are in descending powers, and
-  the length of $$p$$ is $$n+1$$:
+  The coefficients in $p$  are in descending powers, and
+  the length of $p$ is $n+1$:
  
   $$p(x)=p_1\cdot x^n+p_2\cdot x^{n-1}+...+p_n\cdot x+p_{n+1}$$
   

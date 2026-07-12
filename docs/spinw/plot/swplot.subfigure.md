@@ -15,8 +15,8 @@ window on the screen, the position is determined similarly to the Matlab
 function [subplot](https://www.mathworks.com/help/matlab/ref/subplot.html). Here the screen is the canvas where the figure
 window is positioned.
    
-The function divides the display into an $$m$$-by-$$n$$ grid and moves the
-figure window in the position specified by $$p$$. It numbers the figures by
+The function divides the display into an $m$-by-$n$ grid and moves the
+figure window in the position specified by $p$. It numbers the figures by
 row major, such that the first figure is the first column of the first
 row, the second figure is the second column of the first row, and so on.
  

@@ -22,7 +22,7 @@ This function won't work with spectra of multiple twins." %}
   
 `'tol'`
 : Energy tolerance, within the given value two energies are considered
-  equal. Default value is $$10^{-5}$$.
+  equal. Default value is $10^{-5}$.
   
 `'zeroint'`
 : The minimum intensity value, below which the mode is removed. Default

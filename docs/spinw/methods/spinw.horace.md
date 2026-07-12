@@ -13,7 +13,7 @@ dispersion and intensity for [Horace](http://horace.isis.rl.ac.uk).
   
 ## Examples
   
-This example creates a `d3d` object, a square in $$(h,k,0)$$ plane and in
+This example creates a `d3d` object, a square in $(h,k,0)$ plane and in
 energy between 0 and 10 meV. Then calculates the inelastice neutron
 scattering intensity of the square lattice antiferromagnet stored in
 `cryst` and plots a cut between 4 and 5 meV using the Horace `plot`
@@ -43,7 +43,7 @@ plot(cut(d3dobj,[],[],[4 5]))
 : Selects the previously calculated intensity component to be
   convoluted. The possible options are:
   * `'Sperp'` convolutes the magnetic neutron scattering
-              intensity ($$\langle S_\perp \cdot S_\perp\rangle$$ expectation value).
+              intensity ($\langle S_\perp \cdot S_\perp\rangle$ expectation value).
               Default value.
   * `'Sab'`   convolutes the selected components of the spin-spin
               correlation function.
@@ -114,7 +114,7 @@ plot(cut(d3dobj,[],[],[4 5]))
 `w`
 : Cell that contains the spin wave energies. Every cell elements
           contains a vector of spin wave energies for the corresponding
-          input $$Q$$ vector.
+          input $Q$ vector.
  
 `s`
 : Cell that contains the calculated element of the spin-spin

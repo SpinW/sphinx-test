@@ -21,12 +21,12 @@ a given value and default values for select parameters.
  
 `format`
 : A struct with the following fields:
-  * `fname` Field names, $$n_{param}$$ strings in cell.
+  * `fname` Field names, $n_{param}$ strings in cell.
   * `size` Required dimensions of the corresponding value in a cell of
-    $$n_{param}$$ vectors. Negative integer means dimension has to match with
+    $n_{param}$ vectors. Negative integer means dimension has to match with
     any other dimension which has the identical negative integer.
-  * `defval` Cell of $$n_{param}$$ values, provides default values for
+  * `defval` Cell of $n_{param}$ values, provides default values for
     missing parameters.
-  * `soft` Cell of $$n_{param}$$ logical values, optional. If `soft(i)` is
-    true, in case of missing parameter value $$i$$, no warning will be
+  * `soft` Cell of $n_{param}$ logical values, optional. If `soft(i)` is
+    true, in case of missing parameter value $i$, no warning will be
     given.

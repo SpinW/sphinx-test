@@ -10,7 +10,7 @@
  
 `gencoupling(obj,Name,Value)` generates all bonds up to a certain length
 between magnetic atoms. It also groups bonds based either on crystal
-symmetry (is space group is not $$P0$$) or bond length (with `tolDist`
+symmetry (is space group is not $P0$) or bond length (with `tolDist`
 tolerance) is space group is not defined. Sorting bonds based on length
 can be forced by setting the `forceNoSym` parameter to true. To check
 whether a space group is defined call the [spinw.symmetry](#spinw-symmetry) function.
@@ -70,7 +70,7 @@ cryst.table('bond',1:3)
  
 `'tolDist'`
 : Tolerance of distance, within two bonds are considered
-  equivalent, default value is $$10^{-3}$$Å. Only used, when no
+  equivalent, default value is $10^{-3}$Å. Only used, when no
   space group is defined.
  
 `'dMin'`

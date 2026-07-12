@@ -177,7 +177,9 @@ Ground state energy: -1.000 meV/spin.
 
 ```{image} /_static/img/tutorials/tutorial08/tutorial8_06.png
 :alt: 
-``` ```{image} /_static/img/tutorials/tutorial08/tutorial8_07.png
+```
+
+```{image} /_static/img/tutorials/tutorial08/tutorial8_07.png
 :alt: 
 ``` 
 

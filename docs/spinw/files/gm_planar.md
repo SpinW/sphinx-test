@@ -9,27 +9,27 @@
 ## Description
   
 `[s, k, n, name, pname, limit] = gm_planar(S0, x)` generates the
-parameters of arbitrary planar magnetic structure from $$\varphi$$ angles
+parameters of arbitrary planar magnetic structure from $\varphi$ angles
 (in radian), ordering wave vector (rlu) and spin plane normal vector
-($$xyz$$).
+($xyz$).
    
   
 ## Input Arguments
   
 `x`
 : Input parameters in the following order: 
-  $$[\varphi_1, \varphi_2, ... , k_x, k_y, k_z, n_\theta, n_\varphi]$$.
+  $[\varphi_1, \varphi_2, ... , k_x, k_y, k_z, n_\theta, n_\varphi]$.
   
 `S0`
-: Spin quantum number in a row vector $$(S_1, S_2, ...)$$ or scalar if all
+: Spin quantum number in a row vector $(S_1, S_2, ...)$ or scalar if all
   spins are equal.
   
 ## Output Arguments
   
 `S`
-: Matrix, containing the spin orientations with dimensions of $$[3\times n_{magExt}]$$.
-      Every column contains the $$(S_x S_y S_z)$$ spin components of
-      a magnetic atom in the $$xyz$$ coordinate system.
+: Matrix, containing the spin orientations with dimensions of $[3\times n_{magExt}]$.
+      Every column contains the $(S_x S_y S_z)$ spin components of
+      a magnetic atom in the $xyz$ coordinate system.
  
 `k`
 : Magnetic ordering wavevector in rlu units in a row vector.
@@ -45,7 +45,7 @@ parameters of arbitrary planar magnetic structure from $$\varphi$$ angles
 : Name of the input parameters in a cell: `{'Phi1_rad', ...}`.
  
 `limit`
-: Limits on the input parameters in a matrix with dimensions of $$[2\times n_{param}]$$. Every
+: Limits on the input parameters in a matrix with dimensions of $[2\times n_{param}]$. Every
       column contains a lower and upper limit on the corresponding
       parameter.
   

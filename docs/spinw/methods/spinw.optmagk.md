@@ -29,12 +29,12 @@ Particle-Swarm optimizer.
  
   $$ \mathbf{k} = \sum_i C(i)\cdot \mathbf{k}_{base}(i);$$
  
-  where the optimiser determines the $$C(i)$$ values that correspond
-     to the lowest ground state energy. $$\mathbf{k}_{base}$$ is a
-     matrix with dimensions $$[3\times n_{base}]$$, where $$n_{base}\leq 3$$. The basis
+  where the optimiser determines the $C(i)$ values that correspond
+     to the lowest ground state energy. $\mathbf{k}_{base}$ is a
+     matrix with dimensions $[3\times n_{base}]$, where $n_{base}\leq 3$. The basis
      vectors have to be linearly independent.
   
-The function also accepts all options of [ndbase.pso](ndbase_pso).
+The function also accepts all options of `ndbase.pso`.
   
 ## Output Arguments
   
@@ -46,8 +46,8 @@ The function also accepts all options of [ndbase.pso](ndbase_pso).
                       rotating coordinate system.
   * `E`       The most negative eigenvalue at the given propagation
                       vector.
-  * `stat`    Full output of the [ndbase.pso](ndbase_pso) optimizer.
+  * `stat`    Full output of the `ndbase.pso` optimizer.
   
 ## See Also
   
-[ndbase.pso](ndbase_pso)
+`ndbase.pso`

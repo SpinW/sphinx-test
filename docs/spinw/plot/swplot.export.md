@@ -15,7 +15,7 @@ a bug in the Matlab [print](https://www.mathworks.com/help/matlab/ref/print.html
 does not support transparency, thus all transparency will be removed from
 the figure. Be careful, the vector image filesize can be quite large if
 there are many object on the figure. To reduce the file size, try
-reducing the $$n_{patch}$$ and $$n_{mesh}$$ values to reduce the number of
+reducing the $n_{patch}$ and $n_{mesh}$ values to reduce the number of
 faces per object. The function uses the Matlab built-in [print](https://www.mathworks.com/help/matlab/ref/print.html)
 command after preparing the figure. All figure property restored after
 export.  

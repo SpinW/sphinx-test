@@ -53,7 +53,7 @@ cryst.export('format','pcr','path','test.pcr');
 ### File format dependent options:
    
 `'perm'` (`pcr`)
-: Permutation of the $$xyz$$ atomic positions, default value is `[1 2 3]`.
+: Permutation of the $xyz$ atomic positions, default value is `[1 2 3]`.
    
 `'boundary'` (`MC`)
 : Boundary conditions of the extended unit cell. Default value is `{'per'

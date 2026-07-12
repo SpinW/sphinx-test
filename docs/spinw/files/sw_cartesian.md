@@ -10,8 +10,8 @@
  
 ## Description
  
-`[vy, vz, vx] = sw_cartesian(n)` creates an $$(x,y,z)$$ right handed
-Cartesian coordinate system with $$v_x$$, $$v_y$$ and $$v_z$$ defining the
+`[vy, vz, vx] = sw_cartesian(n)` creates an $(x,y,z)$ right handed
+Cartesian coordinate system with $v_x$, $v_y$ and $v_z$ defining the
 basis vectors.
  
 `V = sw_cartesian(n)` the generated basis vectors are stored in the `V`
@@ -20,7 +20,7 @@ matrix: `V = [vx vy vz]` as column vectors.
 ## Input Arguments
  
 `n`
-: Either a 3 element row/column vector or a $$[3\times 3]$$ matrix with
+: Either a 3 element row/column vector or a $[3\times 3]$ matrix with
   columns defining 3 vectors.
  
 ## Output Arguments

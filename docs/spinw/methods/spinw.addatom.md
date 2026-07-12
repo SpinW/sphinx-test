@@ -14,8 +14,8 @@ quantum number, form factor, etc.
   
 ## Examples
   
-To add a magnetic atom with $$S=1$$ at position $$r=(0,0,0)$$ and a
-non-magnetic one at $$r=(1/2,0,0)$$ with red and blue color respectively
+To add a magnetic atom with $S=1$ at position $r=(0,0,0)$ and a
+non-magnetic one at $r=(1/2,0,0)$ with red and blue color respectively
 use the following command
  
 ```matlab
@@ -33,30 +33,30 @@ crystal.plot
 ## Name-Value Pair Arguments
   
 `r`
-: Atomic positions stored in a matrix with dimensions of $$[3\times
-  n_{atom}]$$.
+: Atomic positions stored in a matrix with dimensions of $[3\times
+  n_{atom}]$.
   
 `label`
 : Names of the atoms in a cell for plotting and form factor
-  calculations (see [magion.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'magion.dat']))), e.g. `label={'atom1' 'atom2'
+  calculations (see `magion.dat`), e.g. `label={'atom1' 'atom2'
   'atom3'}`.
   Default value is `atomi`, where `i` is the atom index.
   
 `S`
-: Spin quantum number stored in a row vector with $$n_{atom}$$ elements,
+: Spin quantum number stored in a row vector with $n_{atom}$ elements,
   for non-magnetic atoms set S to zero. If not given the spin quantum
   number is guessed from the given label of the atom. For example if
-  `label` is `MCr3+` or `Cr3+` then the $$S=3/2$$ high spin state is
-  assumed for Cr$$^{3+}$$. The spin values for every ion is stored in the
-  [magion.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'magion.dat'])) file. If the atom type is unknown $$S=0$$ is assumed.
+  `label` is `MCr3+` or `Cr3+` then the $S=3/2$ high spin state is
+  assumed for Cr$^{3+}$. The spin values for every ion is stored in the
+  `magion.dat` file. If the atom type is unknown $S=0$ is assumed.
   
 `color`
 : RGB color of the atoms for plotting stored in a matrix with dimensions
-  of $$[3\times n_{atom}]$$, where each column describes an RGB color. Each
+  of $[3\times n_{atom}]$, where each column describes an RGB color. Each
   value is between 0 and 255. Default value is the color stored in the
-  [atom.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'atom.dat'])) file. Alternatively a name of the color can be given as a
+  `atom.dat` file. Alternatively a name of the color can be given as a
   string, for example `'White'`, for multiple atoms package it into a
-  cell. For the list of colors, see [swplot.color](#swplot-color) or the [color.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'color.dat']))
+  cell. For the list of colors, see [swplot.color](#swplot-color) or the `color.dat`
   file.
   
 `ox`
@@ -69,14 +69,14 @@ crystal.plot
 `formfact`
 : Neutron scattering form factor, given as a row vector with 9 numbers,
   for details see [sw_mff](#sw-mff). Also string labels can be used from the
-  [magion.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'magion.dat'])) file.
+  `magion.dat` file.
   
 `formfactn`
 : Same as the `formfact` option.
   
 `formfactx`
 : X-ray scattering form factor, given as 9 numbers, for details
-  see [sw_cff](#sw-cff), also labels can be used from the [xrayion.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'xrayion.dat'])) file.
+  see [sw_cff](#sw-cff), also labels can be used from the `xrayion.dat` file.
   
 `Z`
 : Atomic number, given as integer or determined from the atom label
@@ -93,11 +93,11 @@ crystal.plot
 : X-ray scattering length.
   
 `biso`
-: Isotropic displacement factors in units of Å$$^2$$.
+: Isotropic displacement factors in units of Å$^2$.
   Definition is the same as in
   [FullProf](https://www.ill.eu/sites/fullprof/), defining the
-  Debye-Waller factor as $$W(d) = 1/8*b_{iso}/d^2$$, which is included in
-  the structure factor as $$exp(-2W(d))$$.
+  Debye-Waller factor as $W(d) = 1/8*b_{iso}/d^2$, which is included in
+  the structure factor as $exp(-2W(d))$.
   
 `update`
 : If `true`, existing atom with the same label and position as a

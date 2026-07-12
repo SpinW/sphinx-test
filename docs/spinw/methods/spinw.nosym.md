@@ -8,7 +8,7 @@
   
 ## Description
   
-`nosym(obj)` reduces the crystal symmetry to $$P0$$ but keeps all symmetry
+`nosym(obj)` reduces the crystal symmetry to $P0$ but keeps all symmetry
 generated atoms, that become all symmetry inequivalent. The function can
 be used to test different types of symmetry breaking terms in the spin
 Hamiltonian.

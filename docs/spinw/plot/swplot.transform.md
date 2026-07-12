@@ -28,10 +28,10 @@ referenced by the `hFigure` handle.
   
 `M`
 : Transformation matrix with the following dimensions:
-  * $$[4\times4]$$      This follows the Matlab standard definition of coordinate transformations used by [hgtransform](https://www.mathworks.com/help/matlab/ref/hgtransform.html).
-  * $$[3\times 4]$$     This is the SpinW format for space group 
+  * $[4\times4]$      This follows the Matlab standard definition of coordinate transformations used by [hgtransform](https://www.mathworks.com/help/matlab/ref/hgtransform.html).
+  * $[3\times 4]$     This is the SpinW format for space group 
                       transformations, see [swsym.str](#swsym-str). 
-  * $$[3\times 3]$$     This defines a rotation matrix only.
+  * $[3\times 3]$     This defines a rotation matrix only.
       
   Setting `M` to 0 returns the plot to the original orientation
   (equivalent to `M=eye(4)`).
@@ -43,7 +43,7 @@ referenced by the `hFigure` handle.
 ## Output Arguments
  
 `T`
-: Transformation matrix of the figure with dimensions of $$[4\times 4]$$.
+: Transformation matrix of the figure with dimensions of $[4\times 4]$.
     
 ## See Also
  

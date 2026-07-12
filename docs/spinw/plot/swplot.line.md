@@ -32,17 +32,17 @@ object.
   
 `rStart`
 : Coordinate(s) of the starting point, either a 3 element vector or
-  a matrix with dimensions of $$[3\times n_{lineSegment}] to plot multiple line
+  a matrix with dimensions of $[3\times n_{lineSegment}]$ to plot multiple line
   segments.
   
 `rEnd`
 : Coordinate(s) of the end point, either a 3 element vector or
-  a matrix with dimensions of $$[3\times n_{lineSegment}]$$ to plot multiple line
+  a matrix with dimensions of $[3\times n_{lineSegment}]$ to plot multiple line
   segments.
   
 `r`
-: Matrix with dimensions of $$[3\times n_{obj}\times n_{lineSegment}]$$. The function
-  will plot $$n_{obj}$$ number of disconnected curves. The $$i$$th
+: Matrix with dimensions of $[3\times n_{obj}\times n_{lineSegment}]$. The function
+  will plot $n_{obj}$ number of disconnected curves. The $i$th
   curve will follow the `x=r(1,i,:)`, `y=r(2,i,:)`, `z=r(3,i,:)`
   (parameteric) segmented curve.
   

@@ -53,7 +53,7 @@ output of [spinw.energy](#spinw-energy)." %}
 `'endT'`
 : Temperature at which the annealing will stop, can be any positive number
   smaller than `initT`, unit is Kelvin.
-  Default value is $$10^{-3}$$.
+  Default value is $10^{-3}$.
  
 `'cool'`
 : Defines how the following temperature value is calculated from the
@@ -62,7 +62,7 @@ output of [spinw.energy](#spinw-energy)." %}
  
 `'random'`
 : If `true` the initial spin orientation will be random, which is
-  effectively a $$T=\infty$$ paramagnet. If the initial spin configuration
+  effectively a $T=\infty$ paramagnet. If the initial spin configuration
   is undefined (`obj.magstr.S` is empty) the initial configuration
   is always random independently of this parameter.
   Default value is `false`.
@@ -80,7 +80,7 @@ output of [spinw.energy](#spinw-energy)." %}
  
 `'nStat'`
 : Number of cycles at the last temperature to calculate
-  statistical averages. It has to be smaller or equal $$n_{MC}$$.
+  statistical averages. It has to be smaller or equal $n_{MC}$.
   Default value is 100.
  
 `'boundary'`
@@ -124,15 +124,15 @@ output of [spinw.energy](#spinw-energy)." %}
   ```matlab
   cGraph = fSub(conn,nExt)
   ```
-  where `cGraph` is a row vector with $$n_{magExt}$$ number of elements
-  `conn` is a matrix with dimensions of $$[2\times n_{conn}]$$ $$n_{ext}$$ is
+  where `cGraph` is a row vector with $n_{magExt}$ number of elements
+  `conn` is a matrix with dimensions of $[2\times n_{conn}]$ $n_{ext}$ is
   equal to `nExt`. For the SpinW implementation see [sw_fsub](#sw-fsub). Default
   value is `@sw_fsub`.
  
 `'subLat'`
 : Vector that assigns all magnetic moments into non-interacting
-  sublattices, contains a single index $$(1,2,3...)$$ for every
-  magnetic moment, row vector with $$n_{magExt}$$ number of elements. If
+  sublattices, contains a single index $(1,2,3...)$ for every
+  magnetic moment, row vector with $n_{magExt}$ number of elements. If
   undefined, the function defined in `fSub` parameter will be used to
   partition the lattice.
  
@@ -159,7 +159,7 @@ of the simulation with the following fields:
  
 `M`
 : Components of the magnetisation after the last annealing
-  run stored in a matrix with dimensions of $$[3\times n_{magExt}]$$.
+  run stored in a matrix with dimensions of $[3\times n_{magExt}]$.
  
 `E`
 : Energy of the system after the last annealing run, excluding the self
@@ -174,12 +174,12 @@ calculated:
  
 `avgM`
 : Average value of the magnetisation vector sampled over `nStat` runs,
-  stored in a matrix with dimensions of $$[3\times n_{magExt}]$$.
+  stored in a matrix with dimensions of $[3\times n_{magExt}]$.
  
 `stdM`
 : Standard deviation of the mgnetisation vector sampled over
-  `nStat` runs, stored in a matrix with dimensions of $$[3\times
-  n_{magExt}]$$.
+  `nStat` runs, stored in a matrix with dimensions of $[3\times
+  n_{magExt}]$.
  
 `avgE`
 : Average system energy per spin averaged over `nStat` runs, scalar.
@@ -189,10 +189,10 @@ calculated:
   `nStat` runs, scalar.
  
 `Cp`
-: Heat capacity of the sample, calculated using the formula $$(\langle E^2\rangle-\langle E\rangle^2)/k_B/T^2$$.
+: Heat capacity of the sample, calculated using the formula $(\langle E^2\rangle-\langle E\rangle^2)/k_B/T^2$.
  
 `Chi`
-: Magnetic susceptibility of the sample calculated using the formula $$(\langle M^2\rangle-\langle M\rangle^2)/k_B/T$$.
+: Magnetic susceptibility of the sample calculated using the formula $(\langle M^2\rangle-\langle M\rangle^2)/k_B/T$.
  
  
 ## Reference

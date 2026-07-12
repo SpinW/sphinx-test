@@ -9,13 +9,13 @@
 ## Description
   
 `rlVec = rl(obj, {norm})` returns the lattice vectors of the reciprocal
-lattice in a $$[3\times 3]$$ matrix, with the $$a^*$$, $$b^*$$ and $$c^*$$ vectors
+lattice in a $[3\times 3]$ matrix, with the $a^*$, $b^*$ and $c^*$ vectors
 stored in **rows**. 
  
   
 ## Examples
   
-To convert from reciprocal lattice unit to Å$$^{-1}$$ ($$xyz$$
+To convert from reciprocal lattice unit to Å$^{-1}$ ($xyz$
 Cartesian coordinate system) use: (`Q_rlu` is a row vector with 3
 elements):
  
@@ -36,7 +36,7 @@ Q_xyz =  Q_rlu * rlVect
   
 `rlVec`
 : Stores the three basis vectors in the rows of matrix with dimensions of
-  $$[3\times 3]$$.
+  $[3\times 3]$.
   
 ## See Also
   

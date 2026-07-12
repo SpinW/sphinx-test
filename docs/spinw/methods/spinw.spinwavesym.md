@@ -9,17 +9,17 @@
 ## Description
   
 `spectra = spinwavesym(obj,Name,Value)` calculates symbolic spin wave
-dispersion as a function of $$Q$$. The function can deal with arbitrary
+dispersion as a function of $Q$. The function can deal with arbitrary
 magnetic structure and magnetic interactions as well as single ion
 anisotropy and magnetic field. Biquadratic exchange interactions are also
-implemented, however only for $$k=0$$ magnetic structures.
+implemented, however only for $k=0$ magnetic structures.
   
 If the magnetic propagation vector is non-integer, the dispersion is
 calculated using a coordinate system rotating from cell to cell. In this
 case the Hamiltonian has to fulfill this extra rotational symmetry.
    
 The method works for incommensurate structures, however the calculated
-omega dispersion does not contain the $$\omega(\mathbf{k}\pm \mathbf{k}_m)$$ terms that has to be
+omega dispersion does not contain the $\omega(\mathbf{k}\pm \mathbf{k}_m)$ terms that has to be
 added manually.
    
 The method for matrix diagonalization is according to R.M. White, PR 139
@@ -84,7 +84,7 @@ title('Spin wave dispersion of the TLHAF')
 ## Name-Value Pair Arguments
   
 `'hkl'`
-: Symbolic definition of $$Q$$ vector. Default is the general $$Q$$
+: Symbolic definition of $Q$ vector. Default is the general $Q$
   point:
   ```matlab
   hkl = [sym('h') sym('k') sym('l')]
@@ -103,7 +103,7 @@ title('Spin wave dispersion of the TLHAF')
 : Tolerance of the incommensurability of the magnetic
   ordering wavevector. Deviations from integer values of the
   ordering wavevector smaller than the tolerance are
-  considered to be commensurate. Default value is $$10^{-4}$$.
+  considered to be commensurate. Default value is $10^{-4}$.
   
 `'norm'`
 : Whether to produce the normalized symbolic eigenvectors. It can be
@@ -127,7 +127,7 @@ title('Spin wave dispersion of the TLHAF')
 `spectra`
 : Structure, with the following fields:
   * `omega`   Calculated spin wave dispersion, dimensins are
-              $$[2*n_{magExt}\times n_{hkl}]$$, where $$n_{magExt}$$ is the number of magnetic
+              $[2*n_{magExt}\times n_{hkl}]$, where $n_{magExt}$ is the number of magnetic
               atoms in the extended unit cell.
   * `V0`      Eigenvectors of the quadratic Hamiltonian.
   * `V`       Normalized eigenvectors of the quadratic Hamiltonian.

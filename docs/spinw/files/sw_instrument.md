@@ -27,7 +27,7 @@ coverage).
                FWHM resolution at the given energy transfer
                value, see [sw_res](#sw-res) function for details.
   * *number*   Constant FWHM energy resolution given by the number.
-  * *matrix*   Dimensions of $$[N\times 2]$$, where the first column contains the
+  * *matrix*   Dimensions of $[N\times 2]$, where the first column contains the
                energy transfer values, second column contains
                the FWHM resolution values. These discrete values will
                be fitted using a polynomial with a fixed
@@ -51,7 +51,7 @@ coverage).
   
 `'dQ'`
 : Momentum transfer resolution of the instrument, FWHM is
-  given in Å$$^{-1}$$ units by default, unless different units
+  given in Å$^{-1}$ units by default, unless different units
   are defined in [spinw.unit](#spinw-unit). Default value is 0 for no convolution.
   
 `'thetaMin'`
@@ -67,7 +67,7 @@ coverage).
 `'norm'`
 : If true, the data is normalized to mbarn units. Default is
   false. If no g-tensor is included in the spin wave
-  calculation, $$g = 2$$ will be assumed for the conversion.
+  calculation, $g = 2$ will be assumed for the conversion.
   
 `'useRaw'`
 : If `false`, the already modified `spectra.swConv` field is
@@ -77,7 +77,7 @@ coverage).
 For simulating the effect of the neutron kinematic limit or the finite 
 detector coverage of a neutron spectrometer one of the following
 parameter has to be given. The unit of these quantities is defined in
-[spinw.unit](#spinw-unit) with default momentum unit of Å$$^{-1}$$ and energy
+[spinw.unit](#spinw-unit) with default momentum unit of Å$^{-1}$ and energy
 unit of meV.
  
 `'ki'`

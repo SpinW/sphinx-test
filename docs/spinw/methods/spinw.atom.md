@@ -11,7 +11,7 @@
 `atomList = atom(obj)` generates all atomic positions using the symmetry
 operators stored in `obj.lattice.sym` and the symmetry inequivalent
 atomic positions in `obj.unit_cell.r`. If no symmetry is defined (denoted
-$$P0$$ symmetry) or the symmetry is $$P1$$ the function returns simply the
+$P0$ symmetry) or the symmetry is $P1$ the function returns simply the
 positions stored in `obj.unit_cell.r`.
   
 ## Examples
@@ -46,11 +46,11 @@ atomList.r
   
 `atomList` is a structure with the following fields:
 * `r`     Positions of the atoms in lattice units stored in matrix with
-          dimensions of $$[3\times n_{atom}]$$. 
+          dimensions of $[3\times n_{atom}]$. 
 * `idx`   Indices of the atoms in the [spinw.unit_cell](#spinw-unit-cell) field stored in a
-          matrix with dimensions of $$[1\times n_{atom}]$$.
+          matrix with dimensions of $[1\times n_{atom}]$.
 * `mag`   Vector of logical variables, `true` if the spin of the atom is
-          non-zero, dimensions are $$[1\times n_{atom}]$$.
+          non-zero, dimensions are $[1\times n_{atom}]$.
   
 ## See Also
   

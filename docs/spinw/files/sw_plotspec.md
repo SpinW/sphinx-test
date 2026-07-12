@@ -45,7 +45,7 @@ points.
 : Number of colors in the colormap, default value is 500.
   
 `'dashed'`
-: If `true` dashed vertical lines between linear $$Q$$ segments will be
+: If `true` dashed vertical lines between linear $Q$ segments will be
   shown. Default is `false`.
   
 `'dE'`
@@ -67,7 +67,7 @@ points.
   also used for plotting dispersion curves. In case a single color all
   dispersion curves have the same color (e.g. `[255 0 0]` for red), or as
   many colors as dispersion curves in a matrix with dimensions of
-  $$[3\times n_{mode}]$$ or as a colormap function handle. In this case
+  $[3\times n_{mode}]$ or as a colormap function handle. In this case
   every mode will have different color and the color is determined from
   the index of the mode after the colormap is applied. Default value is
   `'auto'`.
@@ -91,12 +91,12 @@ points.
 `'twin'`
 : Select which twins to be plotted for dispersion plots, by default the
   spectrum corresponding to all twins will be plotted. The dimensions are
-  $$[1\times n_{twinToPlot}]$$.
+  $[1\times n_{twinToPlot}]$.
   
 `'lineStyle'`
 : Line style for line plots (dispersion and intensity), default value
   `{'-' 'o-' '--'}` for plotting modes that correspond to line style of
-  $$S(Q,\omega)$$, $$S(Q+k,\omega)$$ and $$S(Q-k,\omega)$$ cross modes in case
+  $S(Q,\omega)$, $S(Q+k,\omega)$ and $S(Q-k,\omega)$ cross modes in case
   of incommensurate magnetic systems. For commensurate systems only thte
   first string in the cell will be considered. For example '--' gives
   dashed lines.
@@ -126,12 +126,12 @@ points.
   value stored in the input `spectra.norm`.
   
 `'x0'`
-: Row vector with two numbers `[x0_min x0_max]`. By default the $$x$$ range
-  of the plot is `[0 1]` irrespective of the values of the $$Q$$ values. To
+: Row vector with two numbers `[x0_min x0_max]`. By default the $x$ range
+  of the plot is `[0 1]` irrespective of the values of the $Q$ values. To
   change this the lower and upper limits can be given here.
   
 `'qlabel'`
-: Provide a list of strings for the special $$Q$$ points along the path in
+: Provide a list of strings for the special $Q$ points along the path in
   the Brillouin zone, e.g. `{'X' '\Gamma' 'M' 'K' '\Gamma'}`.
   
 `'dat'`
@@ -148,9 +148,9 @@ points.
   ```
   
 `'ddat'`
-: Maximum distance between any $$Q$$ point in the simulated spectrum
-  and an experimental data point in Å$$^{-1}$$ unit. If an
-  experimental data point is further from any $$Q$$ point than the given 
+: Maximum distance between any $Q$ point in the simulated spectrum
+  and an experimental data point in Å$^{-1}$ unit. If an
+  experimental data point is further from any $Q$ point than the given 
   limit, it will be omitted. Default value is 0.01.
   
 ## Output Arguments

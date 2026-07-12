@@ -33,7 +33,7 @@ parameters as [spinw.anneal](#spinw-anneal) plus an additional
   
 `'x'`
 : Matrix of values of the loop parameter, with dimensions of
-  $$[n_{par}\times n_{loop}]$$. Default value is 1. In the i-th loop the
+  $[n_{par}\times n_{loop}]$. Default value is 1. In the i-th loop the
   loop function is called as:
   ```matlab
   func(obj,x(:,i));
@@ -55,7 +55,7 @@ parameters as [spinw.anneal](#spinw-anneal) plus an additional
 ## Output Arguments
   
 Same output as of [spinw.anneal](#spinw-anneal), just the struct is packaged into a cell
-with $$n_{loop}$$ number of elements.
+with $n_{loop}$ number of elements.
  
 ## Reference
  

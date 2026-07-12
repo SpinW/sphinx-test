@@ -13,7 +13,7 @@
 $$J(\mathbf{k}) = \sum_{i,j} J_{i,j} * \exp(i \mathbf{k}\cdot \mathbf{d}_{i,j})$$
  
 The code is optimised for calculating the sum for large number of wave
-vectors and alternatively for a large number of $$d_{i,j}$$ vectors (large
+vectors and alternatively for a large number of $d_{i,j}$ vectors (large
 system size). The single ion anisotropy is not included in the sum.
   
 ## Input Arguments
@@ -22,15 +22,15 @@ system size). The single ion anisotropy is not included in the sum.
 : [spinw](#spinw) object.
   
 `Q`
-: Defines the $$Q$$ points where the spectra is calculated, in reciprocal
-  lattice units, size is $$[3\times n_{Q}]$$. $$Q$$ can be also defined by
+: Defines the $Q$ points where the spectra is calculated, in reciprocal
+  lattice units, size is $[3\times n_{Q}]$. $Q$ can be also defined by
   several linear scan in reciprocal space. In this case `Q` is cell type,
-  where each element of the cell defines a point in $$Q$$ space. Linear scans
-  are assumed between consecutive points. Also the number of $$Q$$ points can
+  where each element of the cell defines a point in $Q$ space. Linear scans
+  are assumed between consecutive points. Also the number of $Q$ points can
   be specified as a last element, it is 100 by defaults. 
     
-  For example to define a scan along $$(h,0,0)$$ from $$h=0$$ to $$h=1$$ using
-  200 $$Q$$ points the following input should be used:
+  For example to define a scan along $(h,0,0)$ from $h=0$ to $h=1$ using
+  200 $Q$ points the following input should be used:
   ```matlab
   Q = {[0 0 0] [1 0 0]  50}
   ```
@@ -38,12 +38,12 @@ system size). The single ion anisotropy is not included in the sum.
   For symbolic calculation at a general reciprocal space point use `sym`
   type input. 
  
-  For example to calculate the spectrum along $$(h,0,0)$$ use:
+  For example to calculate the spectrum along $(h,0,0)$ use:
   ```matlab
   Q = [sym('h') 0 0]
   ```
-  To calculate spectrum at a specific $$Q$$ point symbolically, e.g. at
-  $$(0,1,0)$$ use:
+  To calculate spectrum at a specific $Q$ point symbolically, e.g. at
+  $(0,1,0)$ use:
   ```matlab
   Q = sym([0 1 0])
   ```
@@ -58,10 +58,10 @@ system size). The single ion anisotropy is not included in the sum.
 `'isomode'`
 : Defines how Heisenberg/non-Heisenberg Hamiltonians are
   treated. Can have the following values:
-  * `'off'`   Always output the $$[3\times 3]$$ form of the
+  * `'off'`   Always output the $[3\times 3]$ form of the
               Hamiltonian, (default).
   * `'auto'`  If the Hamiltonian is Heisenberg, only output
-              one of the diagonal values from the $$[3\times 3]$$
+              one of the diagonal values from the $[3\times 3]$
               matrices to reduce memory consumption.
   
 `'fid'`
@@ -76,16 +76,16 @@ system size). The single ion anisotropy is not included in the sum.
   
 `res` struct type with the following fields:
 * `ft`        contains the Fourier transform in a matrix with dimensions
-              $$[3\times 3\times n_{magExt}\times n_{magExt}\times
-              n_{hkl}]$$ or $$[1\times 1\times n_{magExt}\times n_{magExt}\times n_{hkl}]$$
+              $[3\times 3\times n_{magExt}\times n_{magExt}\times
+              n_{hkl}]$ or $[1\times 1\times n_{magExt}\times n_{magExt}\times n_{hkl}]$
               for Heisenberg and non-Heisenberg Hamiltonians respectively
-              (if isomode is `'auto'`). Here $$n_{magExt}$$ is the number of
-              magnetic atoms in the magnetic cell and $$n_{hkl}$$ is the number
+              (if isomode is `'auto'`). Here $n_{magExt}$ is the number of
+              magnetic atoms in the magnetic cell and $n_{hkl}$ is the number
               of reciprocal space points.
 * `hkl`       Matrix with the given reciprocal space points stored in a
-              matrix with dimensions $$[3\times n_{hkl}]$$.
+              matrix with dimensions $[3\times n_{hkl}]$.
 * `isiso`     True is the output is in Heisenberg mode, when the `ft`
-              matrix has dimensions of $$[1\times 1\times n_{magExt}\times n_{magExt}\times n_{hkl}]$$,
+              matrix has dimensions of $[1\times 1\times n_{magExt}\times n_{magExt}\times n_{hkl}]$,
               otherwise it is `false`.
   
 ## See Also

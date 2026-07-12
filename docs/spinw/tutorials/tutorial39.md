@@ -139,7 +139,9 @@ fitpow.plot_1d_cuts_of_2d_data(qcens-dq, qcens+dq, pfit)
 
 ```{image} /_static/img/tutorials/tutorial39/tutorial39_02.png
 :alt: 
-``` ```{image} /_static/img/tutorials/tutorial39/tutorial39_03.png
+```
+
+```{image} /_static/img/tutorials/tutorial39/tutorial39_03.png
 :alt: 
 ``` 
 

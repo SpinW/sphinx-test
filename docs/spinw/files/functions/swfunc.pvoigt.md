@@ -8,8 +8,8 @@
   
 ## Description
   
-`y = func.pvoigt(x,p)` calculates the $$y$$ values for a pseudovoigt
-function evaluated at $$x$$ and with parameters defined in `p`. The
+`y = func.pvoigt(x,p)` calculates the $y$ values for a pseudovoigt
+function evaluated at $x$ and with parameters defined in `p`. The
 Gaussian and Lorentzian functions are normalized to amplitude 1 before
 the mixing.
   
@@ -25,7 +25,7 @@ the mixing.
   * `wG`      FWHM value of the Gaussian, has to be positive,
   * `wL`      FWHM value of the Lorentzian, has to be positive,
   * `mu`      mixing constant, `mu=1` for pure Lorenzian, `mu=0` for pure
-              Gaussian, the value has to be within the $$(0,1)$$ range.
+              Gaussian, the value has to be within the $(0,1)$ range.
   
 ## See Also
   

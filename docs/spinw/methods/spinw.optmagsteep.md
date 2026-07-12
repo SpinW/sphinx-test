@@ -45,14 +45,14 @@ equivalent to a thermal quenching from the paramagnetic state.
 : Function that defines non-interacting sublattices for parallelization.
   It has the following header:
       `cGraph = fSub(conn,nExt)`, where `cGraph` is a row vector with
-      $$n_{magExt}$$ number of elements,
-  `conn` is a matrix with dimensions of $$[2\times n_{conn}]$$ size matrix and $$n_{ext}$$ is equal to
+      $n_{magExt}$ number of elements,
+  `conn` is a matrix with dimensions of $[2\times n_{conn}]$ size matrix and $n_{ext}$ is equal to
   the `nExt` parameter. Default value is `@sw_fsub`.
   
 `'subLat'`
 : Vector that assigns all magnetic moments into non-interacting
-  sublattices, contains a single index $$(1,2,3...)$$ for every magnetic
-  moment in a row vector with $$n_{magExt}$$ number of elements. If
+  sublattices, contains a single index $(1,2,3...)$ for every magnetic
+  moment in a row vector with $n_{magExt}$ number of elements. If
   undefined, the function defined in `fSub` will be used to partition the
   lattice.
   
@@ -94,9 +94,9 @@ equivalent to a thermal quenching from the paramagnetic state.
 `optm`
 : Struct type variable with the following fields:
   * `obj`         spinw object that contains the optimised magnetic structure.
-  * `M`           Magnetic moment directions with dimensions $$[3\times n_{magExt}]$$, if
+  * `M`           Magnetic moment directions with dimensions $[3\times n_{magExt}]$, if
                   `saveAll` parameter is `true`, it contains the magnetic structure
-                  after every loop in a matrix with dimensions $$[3\times n{magExt}\times n_{loop}]$$.
+                  after every loop in a matrix with dimensions $[3\times n{magExt}\times n_{loop}]$.
   * `dM`          The change of magnetic moment vector averaged over all moments
                   in the last loop.
   * `e`           Energy per spin in the optimised structure.

@@ -10,8 +10,8 @@
   
 `result = swsym.isop(op)` determines whether the given matrix has
 dimensions that is compatible with the size requirements of space group
-operators. The given `op` matrix has to have dimensions of $$[3\times
-4\times n_{op}]$$. The function returns `true` only if the input has these
+operators. The given `op` matrix has to have dimensions of $[3\times
+4\times n_{op}]$. The function returns `true` only if the input has these
 dimensions.
  
 ## See Also

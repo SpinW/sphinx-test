@@ -19,7 +19,7 @@ the allowed Dzyaloshinskii-Moriya vectors.
 ## Examples
   
 To following code will determine the allowed anisotropy matrix elements
-in the $$C4$$ point group (the symmetry at the $$(0,0,0)$$ atomic position).
+in the $C4$ point group (the symmetry at the $(0,0,0)$ atomic position).
 The allowed matrix elements will be `diag([A A B])`:
  
 ```matlab
@@ -78,7 +78,7 @@ Optional inputs:
   element.
   
 `pref`
-: If defined `amat` will contain a single $$[3\times 3]$$ matrix by
+: If defined `amat` will contain a single $[3\times 3]$ matrix by
   multuplying the calculated tensor components with the given prefactors.
   Thus `pref` should contain the same number of elements as the number of
   symmetry allowed tensor components. Alternatively, if only a few of the
@@ -112,8 +112,8 @@ Optional inputs:
   
 `aMat`
 : If no prefactors are defined, `aMat` contains all symmetry
-  allowed elements of the selected tensor, dimensions are $$[3\times 3\times n_{symmat}]$$.
-  If a prefactor is defined, it is a single $$[3\times 3]$$ matrix, that is
+  allowed elements of the selected tensor, dimensions are $[3\times 3\times n_{symmat}]$.
+  If a prefactor is defined, it is a single $[3\times 3]$ matrix, that is
   a sum of all symmetry allowed elemenets multiplied by the given
   prefactors.
   

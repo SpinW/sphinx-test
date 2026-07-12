@@ -12,7 +12,7 @@ sym/*
 
 This package deals with symmetry operators of crystallographic space
 groups. It can read the standard space group definitions stored in
-[symmetry.dat](<matlab:edit(%5Bsw_rootdir,'dat_files',filesep,'symmetry.dat'%5D)>), generate all symmmetry elements, determine all symmetry
+`symmetry.dat`, generate all symmmetry elements, determine all symmetry
 equivalent positions, etc.
 
 All symmetry operators `symOp` are defined by a matrix with dimensions of

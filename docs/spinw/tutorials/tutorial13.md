@@ -102,9 +102,13 @@ swplot.subfigure(1,3,1)
 
 ```{image} /_static/img/tutorials/tutorial13/tutorial13_04.png
 :alt: 
-``` ```{image} /_static/img/tutorials/tutorial13/tutorial13_05.png
+```
+
+```{image} /_static/img/tutorials/tutorial13/tutorial13_05.png
 :alt: 
-``` ```{image} /_static/img/tutorials/tutorial13/tutorial13_06.png
+```
+
+```{image} /_static/img/tutorials/tutorial13/tutorial13_06.png
 :alt: 
 ``` 
 

@@ -32,8 +32,8 @@ of color, legend test, tooltip text etc. This commands is used by the
   
 `'position'`
 : Position of the object/objects in a matrix with dimensions of
-  $$[3\times n_{obj}\times 2]$$ or $$[3\times n_{obj}]$$ or $$[3\times
-  n_{obj}\times n_{point}]$$ depending on the type of object. The unit of
+  $[3\times n_{obj}\times 2]$ or $[3\times n_{obj}]$ or $[3\times
+  n_{obj}\times n_{point}]$ depending on the type of object. The unit of
   the positions is determined by the `unit` parameter.
   
 `'name'`
@@ -49,7 +49,7 @@ of color, legend test, tooltip text etc. This commands is used by the
   
 `'label'`
 : Text to appear in the legend in a string for the same text of
-  all objects or strings in a cell with $$n_{obj}$$ number of elements for
+  all objects or strings in a cell with $n_{obj}$ number of elements for
   multiple objects. Default value is taken from the `name` parameter.
   
 `'legend'`
@@ -61,15 +61,15 @@ of color, legend test, tooltip text etc. This commands is used by the
   
 `'color'`
 : Color of objects, either a single color or as many colors as
-  many objects are given in a matrix with dimensions of $$[3\times 1]$$ or
-  $$[3\times n_{obj}]$$. Colors are RGB triplets with values between 0 and
+  many objects are given in a matrix with dimensions of $[3\times 1]$ or
+  $[3\times n_{obj}]$. Colors are RGB triplets with values between 0 and
   255. Can be also string or cell of strings with the name of the colors,
   for possible color names see [swplot.color](#swplot-color). Default value is `'red'`.
   
 `'alpha'`
 : Transparency of objects (1: non-transparent, 0: transparent)
   defined as a single number for uniform transparency or as a
-  row vector with $$n_{obj}$$ number of elements to set transparency per object.
+  row vector with $n_{obj}$ number of elements to set transparency per object.
   Default value is 1.
   
 `'unit'`
@@ -95,7 +95,7 @@ of color, legend test, tooltip text etc. This commands is used by the
 `'T'`
 : Transformation matrix that transforms a unit sphere to the
   ellipse via: `R' = T(:,:,i)*R`, stored in a matrix with
-  dimensions of $$[3\times 3\times n_{obj}]$$.
+  dimensions of $[3\times 3\times n_{obj}]$.
   
 `'lineStyle'`
 : Line style, default value is `'-'` for continuous lines. It can
@@ -109,7 +109,7 @@ of color, legend test, tooltip text etc. This commands is used by the
   * `5`   `'none'`.
   
 `'lineWidth'`
-: Line width, default value is 0.5, can be a vector with $$n_{obj}$$
+: Line width, default value is 0.5, can be a vector with $n_{obj}$
   columns for different width per line segment.
   
 `'fontSize'`
@@ -137,7 +137,7 @@ of color, legend test, tooltip text etc. This commands is used by the
 `'data'`
 : User supplied data per object that will be stored in the swplot
   figure and can be retrieved using [swplot.getdata](#swplot-getdata). It is stored in a
-  cell with $$n_{obj}$$ number of elements.
+  cell with $n_{obj}$ number of elements.
   
 `'translate'`
 : If `true`, the average center of the plot objects will be translated to

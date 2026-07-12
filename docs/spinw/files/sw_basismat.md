@@ -12,7 +12,7 @@
 elements compatible with a given point group symmetry. The tensor can
 describe exchange interaction or single ion anisotropy. The function
 applies the symmetry invariance of the classical energy
-$$\mathbf{S}_i\cdot \mathcal{M}\cdot \mathbf{S}_j$$. Thus this symmetry
+$\mathbf{S}_i\cdot \mathcal{M}\cdot \mathbf{S}_j$. Thus this symmetry
 analysis includes the transformation properties of spin operators as
 well.
   
@@ -20,26 +20,26 @@ well.
   
 `symOp`
 : Generators of the point group symmetry, in a matrix with dimensions of
-  $$[3\times 3\times n_{sym}]$$ where each `symOp(:,:,ii)` matrix defines a rotation.
+  $[3\times 3\times n_{sym}]$ where each `symOp(:,:,ii)` matrix defines a rotation.
   
 `r`
 : Distance column vector between the two interacting atoms. For
-  anisotropy $$r=0$$.
+  anisotropy $r=0$.
   
 `tol`
-: Tolerance, optional, default value is $$10^{-5}$$.
+: Tolerance, optional, default value is $10^{-5}$.
   
 ## Output Arguments
   
 `M`
 : Matrices, that span out the vector space of the symmetry
-          allowed matrices, dimensions are $$[3\times 3\times n_M]$$. Any matrix is
+          allowed matrices, dimensions are $[3\times 3\times n_M]$. Any matrix is
           allowed that can be expressed as a linear combination of the
           symmetry allowed matrices.
  
 `asym`
-: Logical vector, for each $$[3\times 3]$$ matrix in $$M$$, tells whether it is
-          antisymmetric stored in a row vector with $$n_M$$ elements.
+: Logical vector, for each $[3\times 3]$ matrix in $M$, tells whether it is
+          antisymmetric stored in a row vector with $n_M$ elements.
   
 ## See Also
   

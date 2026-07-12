@@ -11,7 +11,7 @@
 `[Mu, firstIdx] = sw_uniquetol(m,tol)` returns unique column vectors
 within the given `tol` tolerance. Two column vectors are considered
 unequal, if the distance between them is larger than the tolerance
-($$\delta$$):
+($\delta$):
  
 $$\sqrt{\sum_i (V_i-U_i)^2} < \delta$$
   
@@ -21,7 +21,7 @@ $$\sqrt{\sum_i (V_i-U_i)^2} < \delta$$
 : Matrix that contains column vectors.
   
 `tol`
-: Distance tolerance, default value is $$10^{-5}$$.
+: Distance tolerance, default value is $10^{-5}$.
   
 ## Output Arguments
   

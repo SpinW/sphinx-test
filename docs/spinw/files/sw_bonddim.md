@@ -51,7 +51,7 @@ sw_bonddim(tri.intmatrix.all)
 ## Input Arguments
   
 `C`
-: Bond list in a matrix with dimensions of $$[5\times n_{bond}]$$, where the meaning of
+: Bond list in a matrix with dimensions of $[5\times n_{bond}]$, where the meaning of
   the rows are:
   * `#1:#3`   Lattice translations between the coupled atoms in
               lattice units (always integer).
@@ -70,8 +70,8 @@ sw_bonddim(tri.intmatrix.all)
 `L`
 : Struct with the number of elements equal to the number of
           subsystems, it has the following fields:
-  * `D`       Dimensionality of the subsystem $$(0\leq D\leq 3)$$.
+  * `D`       Dimensionality of the subsystem $(0\leq D\leq 3)$.
   * `base`    Basis vectors spanning the subsystem stored in a
-                      $$[3\times D]$$ matrix where each column denotes a basis
+                      $[3\times D]$ matrix where each column denotes a basis
                       vector.
   * `site`    List of sites that belong to the subsystem.

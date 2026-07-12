@@ -88,16 +88,16 @@ exchange etc.
  
 `SI`
 : single ion properties stored in a structure with fields:
-  * `aniso`   Matrix with dimensions of $$[3\times 3\times n_{magAtom}]$$,
-              where the classical energy of the $$i$$-th spin is expressed
+  * `aniso`   Matrix with dimensions of $[3\times 3\times n_{magAtom}]$,
+              where the classical energy of the $i$-th spin is expressed
               as `E_aniso = spin(:)*A(:,:,i)*spin(:)'`
-	* `g`       g-tensor, with dimensions of $$[3\times 3\times n_{magAtom}]$$. It determines
+	* `g`       g-tensor, with dimensions of $[3\times 3\times n_{magAtom}]$. It determines
               the energy of the magnetic moment in external field:
               `E_field = B(:)*g(:,:,i)*spin(:)'`
-	* `field`   External magnetic field in a row vector with three elements $$(B_x, B_y, B_z)$$.
+	* `field`   External magnetic field in a row vector with three elements $(B_x, B_y, B_z)$.
  
 `RR`
-: Positions of the atoms in lattice units in a matrix with dimensions of $$[3\times n_{magExt}]$$.
+: Positions of the atoms in lattice units in a matrix with dimensions of $[3\times n_{magExt}]$.
   
 ## See Also
   

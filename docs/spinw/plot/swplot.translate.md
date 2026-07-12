@@ -12,7 +12,7 @@
   
 `swplot.translate(mode)` translates the objects of an active swplot
 figure, where the coordinate system is defined by the plane of the figure
-with horizontal $$x$$-axis, vertical $$y$$-axis and out-of-plane $$z$$-axis.
+with horizontal $x$-axis, vertical $y$-axis and out-of-plane $z$-axis.
   
 `swplot.translate(mode, hFigure)` acts on the figure referenced by the
 `hFigure` handle.

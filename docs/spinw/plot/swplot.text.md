@@ -25,7 +25,7 @@ given axis referenced by `handle`.
   
 `r`
 : Coordinate of the center of the text for a single text or
-  matrix with dimensions $$[3\times n_{obj}]$$ for multiple text.
+  matrix with dimensions $[3\times n_{obj}]$ for multiple text.
   
 `string`
 : String that contains the text or cell of strings when multiple

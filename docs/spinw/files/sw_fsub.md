@@ -15,7 +15,7 @@ determines non-connected sublattices for Monte-Carlo calculation.
   
 `conn`
 : Contains edge indices which are connected
-  `conn(1,idx)-->conn(2,idx)` stored in a matrix with dimensions of $$[2times n_{conn}]$$.
+  `conn(1,idx)-->conn(2,idx)` stored in a matrix with dimensions of $[2times n_{conn}]$.
   
 `nExt`
 : Size of the magnetic supercell in a row vector with 3 integers.

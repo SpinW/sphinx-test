@@ -14,7 +14,7 @@
   
 `hPatch = swplot.ellipsoid(R0,T)` creates multiple ellipsoids with a
 single [patch](https://www.mathworks.com/help/matlab/ref/patch.html) command. The ellipsoids are defined by the position
-of the center and a $$[3\times 3]$$ matrix, a qudratic form.
+of the center and a $[3\times 3]$ matrix, a qudratic form.
  
 Significant speedup can be achieved using a single patch command to
 generate many ellipsoids compared to drawing single ellipse per patch.
@@ -35,18 +35,18 @@ patch object.
   
 `R0`
 : Center of the ellipsoids stored in a column vector with 3 elements or a
-  matrix with dimensions of $$[3\times n_{obj}]$$ when multiple ellipsoids
+  matrix with dimensions of $[3\times n_{obj}]$ when multiple ellipsoids
   are defined at once.
   
 `T`
 : Transformation matrix that transforms a unit sphere to the desired
   ellipsoid by applying: `R' = T(:,:,i)*R`. In case of multiple
   ellipsoids the parameter is stored in a matrix with dimensions of
-  $$[3\times 3\times n_{obj}]$$.
+  $[3\times 3\times n_{obj}]$.
   
 `nMesh`
 : Mesh of the ellipse surface, a triangulation class object or an
-  integer that used to generate an icosahedron mesh with $$n_{mesh}$$
+  integer that used to generate an icosahedron mesh with $n_{mesh}$
   number of additional subdivision into triangles. Default value is stored in
   `swpref.getpref('nmesh')`, see also [swplot.icomesh](#swplot-icomesh).
   

@@ -17,7 +17,7 @@ same plot.
 ## Examples
   
 In this example we create two intensity maps stored in the square
-matrices `A` and `B` (linearly changing intensity along $$x$$ and $$y$$ axes
+matrices `A` and `B` (linearly changing intensity along $x$ and $y$ axes
 respectively, intensity ranging between -2 and 2). We plot these
 intensity maps by converting them to RGB colors using the inline function
 `rgbMap` and the Matlab built-in function `image`. We use `sw_multicolor`
@@ -59,17 +59,17 @@ title C=A+B
   
 `vMat`
 : Matrix that contains the input 2D intensity data, dimensions are
-  $$[d_1\times d_2\times n_{plot}]$$, where each intensity map has a
-  dimension of $$[d_1\times d_2]$$.
+  $[d_1\times d_2\times n_{plot}]$, where each intensity map has a
+  dimension of $[d_1\times d_2]$.
   
 `cMap`
 : Defines the color map that maps intensity values within the `cLim`
   limits to colors, can be the following types:
   * `matrix`  Matrix of RGB colors, where each column
               corresponds to an RGB triplet. The dimension of the matrix
-              is $$[3\times n_{plot}]$$ and the $$i$$th color corresponds to
-              the color of the $$i$$th intensity map in the `vMat` stack.
-  * `cell`    Cell of $$n_{plot}$$ colormap functions. For example
+              is $[3\times n_{plot}]$ and the $i$th color corresponds to
+              the color of the $i$th intensity map in the `vMat` stack.
+  * `cell`    Cell of $n_{plot}$ colormap functions. For example
               `{@copper @gray}`.
   
 `cLim`
@@ -89,8 +89,8 @@ title C=A+B
 ## Output Arguments
   
 `cMat`
-: Matrix that contains the RGB image, with dimensions of $$[d_1\times
-  d_2\times 3]$$. The image can be shown using the `image` built-in Matlab
+: Matrix that contains the RGB image, with dimensions of $[d_1\times
+  d_2\times 3]$. The image can be shown using the `image` built-in Matlab
   command.
  
 ## See Also

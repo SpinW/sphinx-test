@@ -9,7 +9,7 @@
 ## Description
   
 `basisVec = basisvector(obj, {norm})` returns the lattice vectors of the
-unit cell in a $$[3\times 3]$$ matrix, with the $$a$$, $$b$$ and $$c$$ vectors
+unit cell in a $[3\times 3]$ matrix, with the $a$, $b$ and $c$ vectors
 stored in columns. The vectors are normalized to the lattice parameters
 by default.
   
@@ -29,7 +29,7 @@ r_lu = inv(basisVec)*r_xyz
 ```
  
 It is also possible to convert between momentum vector in reciprocal
-lattice units (rlu) into Å$$^{-1}$$ units. Assuming that momentum
+lattice units (rlu) into Å$^{-1}$ units. Assuming that momentum
 vectors are row vectors:
 ```matlab
 Q_xyz =  Q_rlu * 2*pi*inv(basisVec)
@@ -52,7 +52,7 @@ Q_rlu = 1/(2*pi)*Q_xyz*basisVect
 ## Output Arguments
   
 `basisVec`
-: Stores the three lattice vectors in columns, dimensions are $$[3\times 3]$$.
+: Stores the three lattice vectors in columns, dimensions are $[3\times 3]$.
   
 ## See Also
   

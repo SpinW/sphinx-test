@@ -23,7 +23,7 @@ if `handle` is an axis handle or adds the arrow to an existing
   
 ## Examples
  
-Draw 100 random unit circle surfaces with center at $$(0,0,0)$$ and random
+Draw 100 random unit circle surfaces with center at $(0,0,0)$ and random
 normal vector.
  
 ```matlab
@@ -43,7 +43,7 @@ swplot.zoom(30)%
   
 `r0`
 : Center position of the circle in a column vector. Multiple circles can
-  be defined using a matrix with dimensions of $$[3\times n_{obj}]$$ where
+  be defined using a matrix with dimensions of $[3\times n_{obj}]$ where
   each column defines a circle center.
   
 `n`
@@ -52,13 +52,13 @@ swplot.zoom(30)%
   parameter.
   
 `R`
-: Radius of the circle, scalar or row vector with $$n_{obj}$$ number of
+: Radius of the circle, scalar or row vector with $n_{obj}$ number of
   elements.
   
 `nPatch`
 : Number of points on the circle circumference, default value is stored in
   `swpref.getpref('npatch')`. The generated patch will contain
-  $$n_{patch}$$ number of faces and vertices.
+  $n_{patch}$ number of faces and vertices.
   
 ## See Also
   

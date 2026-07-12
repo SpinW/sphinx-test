@@ -18,7 +18,7 @@ neighbor bonds can be defined using a vector of exchange values.
 `model`
 : String, name of the model, one of the following:
   * `'triAF'`     Triangular lattice Heisenberg antiferromagnet
-                  in the $$ab$$ plane ($$a=b=3$$ Å), with γ =
+                  in the $ab$ plane ($a=b=3$ Å), with γ =
                   120° angle and optimised magnetic structure.
   * `'squareAF'`  Square lattice antiferromagnet.
   * `'chain'`     Chain with further neighbor interactions.

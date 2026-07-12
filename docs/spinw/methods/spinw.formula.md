@@ -41,7 +41,7 @@ cryst.formula
 `formula` struct variable with the following fields:
 * `m`         Mass of the unit cell in g/mol units.
 * `V`         Calculated volume of the unit cell in length units (defined in [spinw.unit](#spinw-unit)).
-* `rho`       Density in g/cm$$^3$$.
+* `rho`       Density in g/cm$^3$.
 * `chemlabel` List of the different elements.
 * `chemnum`   Number of the listed element names
 * `chemform`  Chemical formula string.

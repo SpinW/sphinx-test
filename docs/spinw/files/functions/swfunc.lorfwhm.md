@@ -8,8 +8,8 @@
   
 ## Description
   
-`y = func.lorfwhm(x,p)` calculates the $$y$$ values for a Lorentzian
-function evaluated at $$x$$ and with parameters defined in `p`.
+`y = func.lorfwhm(x,p)` calculates the $y$ values for a Lorentzian
+function evaluated at $x$ and with parameters defined in `p`.
   
 ## Input Arguments
   

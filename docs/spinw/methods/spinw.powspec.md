@@ -25,8 +25,8 @@ option.
 ## Example
  
 Using only a few lines of code one can calculate the powder spectrum of
-the triangular lattice antiferromagnet ($$S=1$$, $$J=1$$) between $$Q=0$$ and 3
-Å$$^{-1}$$ (the lattice parameter is 3 Å).
+the triangular lattice antiferromagnet ($S=1$, $J=1$) between $Q=0$ and 3
+Å$^{-1}$ (the lattice parameter is 3 Å).
  
 ```matlab
 tri = sw_model('triAF',1);
@@ -46,9 +46,9 @@ sw_plotspec(triSpec);
 : [spinw](#spinw) object.
  
 `QA`
-: Vector containing the $$Q$$ values in units of the inverse of the length
-unit (see [spinw.unit](#spinw-unit)) with default unit being Å$$^{-1}$$. The
-value are stored in a row vector with $$n_Q$$ elements.
+: Vector containing the $Q$ values in units of the inverse of the length
+unit (see [spinw.unit](#spinw-unit)) with default unit being Å$^{-1}$. The
+value are stored in a row vector with $n_Q$ elements.
  
 ## Name-Value Pair Arguments
  
@@ -64,7 +64,7 @@ value are stored in a row vector with $$n_Q$$ elements.
  
 `Evect`
 : Row vector, defines the center/edge of the energy bins of the
-  calculated output, number of elements is $$n_E$$. The energy units are
+  calculated output, number of elements is $n_E$. The energy units are
   defined by the `spinw.unit.kB` property. Default value is an edge bin
   `linspace(0,1.1,101)`.
  
@@ -111,7 +111,7 @@ most important parameters are:
   stored in `obj.unit_cell.ff(1,:,atomIndex)`. Default value is `false`.
  
 `'formfactfun'`
-: Function that calculates the magnetic form factor for given $$Q$$ value.
+: Function that calculates the magnetic form factor for given $Q$ value.
   value. Default value is `@sw_mff`, that uses a tabulated coefficients
   for the form factor calculation. For anisotropic form factors a user
   defined function can be written that has the following header:
@@ -120,10 +120,10 @@ most important parameters are:
   ```
   where the parameters are:
   * `F`           row vector containing the form factor for every input 
-                  $$Q$$ value
+                  $Q$ value
   * `atomLabel`   string, label of the selected magnetic atom
-  * `Q`           matrix with dimensions of $$[3\times n_Q]$$, where each
-                  column contains a $$Q$$ vector in $$Å^{-1}$$ units.
+  * `Q`           matrix with dimensions of $[3\times n_Q]$, where each
+                  column contains a $Q$ vector in $Å^{-1}$ units.
  
 `'gtensor'`
 : If true, the g-tensor will be included in the spin-spin correlation
@@ -139,7 +139,7 @@ most important parameters are:
               the dynamical matrix is converted into another Hermitian
               matrix, that will give the real eigenvalues.
   * `false`   using the standard method (for details see [R.M. White, PR 139 (1965) A450](https://journals.aps.org/pr/abstract/10.1103/PhysRev.139.A450))
-              the non-Hermitian $$\mathcal{g}\times \mathcal{H}$$ matrix
+              the non-Hermitian $\mathcal{g}\times \mathcal{H}$ matrix
               will be diagonalised, which is computationally less
               efficient. Default value is `true`.
  
@@ -169,7 +169,7 @@ The function accepts some parameters of [spinw.scga] with the most important
 parameters are:
  
 `'nInt'`
-: Number of $$Q$$ points where the Brillouin zone is sampled for the
+: Number of $Q$ points where the Brillouin zone is sampled for the
   integration.
  
 ## Output Arguments
@@ -179,10 +179,10 @@ parameters are:
  
   * `swConv` The spectra convoluted with the dispersion. The center
     of the energy bins are stored in `spectra.Evect`. Dimensions are
-    $$[n_E\times n_Q]$$.
-  * `hklA` Same $$Q$$ values as the input `hklA`.
+    $[n_E\times n_Q]$.
+  * `hklA` Same $Q$ values as the input `hklA`.
   * `Evect` Contains the bins (edge values of the bins) of the energy transfer
-    values, dimensions are $$[1\times n_E+1]$$.
+    values, dimensions are $[1\times n_E+1]$.
   * `param` Contains all the input parameters.
   * `obj` The clone of the input `obj` object, see [spinw.copy](#spinw-copy).
  

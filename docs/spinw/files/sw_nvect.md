@@ -25,7 +25,7 @@ collinearity controlled by `epsilon`.
 ## Input Arguments
  
 `V`
-: Matrix of column vectors with dimensions of $$[3\times N]$$. Where each
+: Matrix of column vectors with dimensions of $[3\times N]$. Where each
   column defines a vector.
  
 `epsilon`

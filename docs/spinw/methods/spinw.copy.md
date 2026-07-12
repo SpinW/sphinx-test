@@ -20,8 +20,8 @@ Changing `obj` after the above command will also change `obj2`.
  
 ## Examples
   
-In this example $$J_{1a}$$ is a matrix with 1 in the diagonal, while
-$$J_{1b}$$ has 3.1415 in the diagonal. If `cryst` is changed, `cryst1` will
+In this example $J_{1a}$ is a matrix with 1 in the diagonal, while
+$J_{1b}$ has 3.1415 in the diagonal. If `cryst` is changed, `cryst1` will
 be changed as well and viece versa, since they point to the
 same object. However `cryst2` is independent of `cryst`:
  

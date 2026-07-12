@@ -50,9 +50,9 @@ sw_converter(7.5,'keV','A','photon')
  
 `unitIn`
 : Units of the input value, one of the following string:
-  * `'A-1'`        momentum in Å$$^{-1}$$,
-  * `'A^-1'`       momentum in Å$$^{-1}$$,
-  * `'k'`          momentum in Å$$^{-1}$$,
+  * `'A-1'`        momentum in Å$^{-1}$,
+  * `'A^-1'`       momentum in Å$^{-1}$,
+  * `'k'`          momentum in Å$^{-1}$,
   * `'Angstrom'`   wavelength in Å,
   * `'lambda'`     wavelength in Å,
   * `'A'`          wavelength in Å,
@@ -64,11 +64,11 @@ sw_converter(7.5,'keV','A','photon')
   * `'eV'`         energy in eV,
   * `'keV'`        energy in keV,
   * `'THz'`        frequency in Thz,
-  * `'cm-1'`       $$2\pi/\lambda$$ in cm$$^{-1}$$,
+  * `'cm-1'`       $2\pi/\lambda$ in cm$^{-1}$,
   * `'fs'`         wave period time in fs,
   * `'ps'`         wave period time in ps,
   * `'nm'`         wavelength in nm,
-  * `'um'`         wavelength in $$\mu$$m.
+  * `'um'`         wavelength in $\mu$m.
   
 `unitOut`
 : Units of the output value, same strings are accepted as for `unitIn`.

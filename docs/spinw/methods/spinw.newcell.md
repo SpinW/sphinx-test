@@ -32,7 +32,7 @@ set `'keepq'` parameter to `true` to able to index the reciprocal lattice
 of the orthorhombic cell with the reciprocal lattice of the original
 hexagonal cell. To show that the two models are equivalent, we calculate
 the spin wave spectrum on both model using the same rlu. On the
-orthorhombic cell, the $$Q$$ value will be converted automatically and the
+orthorhombic cell, the $Q$ value will be converted automatically and the
 calculated spectrum will be the same for both cases.
  
 ```matlab
@@ -71,7 +71,7 @@ sw_plotspec(sw_egrid(tri_orth.spinwave({[0 0 0] [1 1 0] 501})),'mode','color','d
 `'bvect'`
 : Defines the new lattice vectors in the original lattice
   coordinate system. Cell with the following elements
-  `{v1 v2 v3}` or a $$[3\times 3]$$ matrix with `v1`, `v2` and `v3` as column
+  `{v1 v2 v3}` or a $[3\times 3]$ matrix with `v1`, `v2` and `v3` as column
   vectors: `[v1 v2 v3]`. Default value is `eye(3)` for indentity
   transformation.
   
@@ -90,13 +90,13 @@ sw_plotspec(sw_egrid(tri_orth.spinwave({[0 0 0] [1 1 0] 501})),'mode','color','d
 ## Output Arguments
   
 `T`
-: Transformation matrix that converts $$Q$$ points (in reciprocal
+: Transformation matrix that converts $Q$ points (in reciprocal
       lattice units) from the old reciprocal lattice to the new
       reciprocal lattice as follows:
   ```matlab
   Qrlu_new = T * Qrlu_old
   ```
-  where the $$Q$$ vectors are row vectors with 3 elements.
+  where the $Q$ vectors are row vectors with 3 elements.
   
 ## See Also
   

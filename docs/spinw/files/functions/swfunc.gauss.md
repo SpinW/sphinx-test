@@ -8,8 +8,8 @@
   
 ## Description
   
-`y = func.gauss(x,p)` calculates the $$y$$ values for a Gaussian function
-evaluated at $$x$$ and with parameters defined in `p`.
+`y = func.gauss(x,p)` calculates the $y$ values for a Gaussian function
+evaluated at $x$ and with parameters defined in `p`.
   
 ## Input Arguments
   

@@ -15,14 +15,14 @@ a single ray and multiple triangles.
 ## Input Arguments
   
 `V`
-: Vertex positions in a matrix with dimensions $$[n_{vertex}\times 3]$$.
+: Vertex positions in a matrix with dimensions $[n_{vertex}\times 3]$.
   
 `F`
-: Faces in a matrix with dimensions $$[n_{face}\times 3]$$, where 
-      $$max(F) = n_{vertex}$$.
+: Faces in a matrix with dimensions $[n_{face}\times 3]$, where 
+      $max(F) = n_{vertex}$.
   
 `ray`
 : Definition of the ray via 2 points in space, stored in a matrix with
-  dimensions of $$[2\times 3]$$. The two points of the ray, $$P_1$$ and
-  $$P_2$$, are stored in the first and second rows respectively. The ray
-  points from $$P_1$$ to $$P_2$$.
+  dimensions of $[2\times 3]$. The two points of the ray, $P_1$ and
+  $P_2$, are stored in the first and second rows respectively. The ray
+  points from $P_1$ to $P_2$.

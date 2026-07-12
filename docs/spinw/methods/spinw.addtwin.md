@@ -33,12 +33,12 @@ cryst.addtwin('axis',[0 0 1],'phid',[60 120],'vol',[1 1])
   
 `'axis'`
 : Defines the axis of rotation to generate twins in the xyz
-  coordinate system, dimensions are $$[1\times 3]$$.
+  coordinate system, dimensions are $[1\times 3]$.
   
 `'phi'`
 : Defines the angle of rotation to generate twins in radian
   units. Several twins can be defined parallel if `phi` is a
-  row vector. Dimensions are $$[1\times n_{twin}]$$.
+  row vector. Dimensions are $[1\times n_{twin}]$.
   
 `'phid'`
 : Alternative to `phi` but the unit is °.
@@ -46,10 +46,10 @@ cryst.addtwin('axis',[0 0 1],'phid',[60 120],'vol',[1 1])
 `'rotC'`
 : Rotation matrices, that define crystallographic twins. This is an
   alternative to the `axis`-`phi` parameter pair. Matrix dimensions are 
-  $$[3\times 3\times n_{twin}]$$.
+  $[3\times 3\times n_{twin}]$.
   
 `'vol'`
-: Volume fractions of the twins stored in a row vector with $$n_{twin}$$
+: Volume fractions of the twins stored in a row vector with $n_{twin}$
   elements. Default value is `ones(1,nTwin)`.
   
 `'overwrite'`

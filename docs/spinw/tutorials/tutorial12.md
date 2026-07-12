@@ -77,9 +77,13 @@ added to its diagonal!
 
 ```{image} /_static/img/tutorials/tutorial12/tutorial12_05.png
 :alt: 
-``` ```{image} /_static/img/tutorials/tutorial12/tutorial12_06.png
+```
+
+```{image} /_static/img/tutorials/tutorial12/tutorial12_06.png
 :alt: 
-``` ```{image} /_static/img/tutorials/tutorial12/tutorial12_07.png
+```
+
+```{image} /_static/img/tutorials/tutorial12/tutorial12_07.png
 :alt: 
 ``` 
 

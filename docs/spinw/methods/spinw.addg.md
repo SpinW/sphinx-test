@@ -9,7 +9,7 @@
 ## Description
   
 `addg(obj, matrixIdx, {atomTypeIdx}, {atomIdx})` assigns the
-$$[3\times 3]$$ matrix selected by `matrixIdx` (using either the matrix
+$[3\times 3]$ matrix selected by `matrixIdx` (using either the matrix
 label or matrix index) to the magnetic sites selected by `atomTypeIdx`
 that can contain a name of an atom or its atom index (see [spinw.atom](#spinw-atom)).
 If `atomTypeIdx` is not defined, g-tensor will be assigned to all
@@ -17,7 +17,7 @@ magnetic atoms.
   
 ## Examples
   
-The following example will add the $$g_1$$ diagonal matrix to all magnetic
+The following example will add the $g_1$ diagonal matrix to all magnetic
 atoms as anisotropic g-tensor and show the effect of a fourfold axis:
   
 ```matlab
@@ -40,13 +40,13 @@ cryst.plot('ionMode','g')
 : Either an integer, that selects the matrix
   `obj.matrix.mat(:,:,matrixIdx)`, or a string identical to one
   of the previously defined matrix labels, stored in
-  `obj.matrix.label`. Maximum value is $$n_{mat}$$.
+  `obj.matrix.label`. Maximum value is $n_{mat}$.
   
 `atomTypeIdx`
 : String or cell of strings that select magnetic atoms by
   their label. Also can be a vector that contains integers, the index of
   the magnetic atoms in [spinw.unit_cell](#spinw-unit-cell), this will assign the given
-  g-tensor to all symmetry equivalent atoms. Maximum value is $$n_{atom}$$.
+  g-tensor to all symmetry equivalent atoms. Maximum value is $n_{atom}$.
   If `atomTypeIdx` is not defined, the given g-tensor will be assigned to
   all magnetic atoms. Optional.
  
@@ -54,7 +54,7 @@ cryst.plot('ionMode','g')
 : A vector that contains indices selecting some of the
   symmetry equivalent atoms. Maximum value is the number of symmetry
   equivalent atoms corresponding to `atomTypeIdx`. If the crystal
-  symmetry is higher than $$P0$$, `atomIdx` is not allowed, since the
+  symmetry is higher than $P0$, `atomIdx` is not allowed, since the
   g-tensor for equivalent atoms will be calculated using the symmetry
   operators of the space group. Optional.
   

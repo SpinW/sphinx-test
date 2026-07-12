@@ -8,15 +8,15 @@
   
 ## Description
   
-`Qm = sw_econtract(Q,Name,Value)` converts $$(Q,E)$$ values in the phase
-space into $$Q$$ values as it would appear when measuring it with via
+`Qm = sw_econtract(Q,Name,Value)` converts $(Q,E)$ values in the phase
+space into $Q$ values as it would appear when measuring it with via
 neutron diffraction.
   
 ## Input Arguments
   
 `Q`
 : Input values in reciprocal space in the scattering plane in
-  Å$$^{-1}$$ units, dimensions are $$[2\times n_Q]$$.
+  Å$^{-1}$ units, dimensions are $[2\times n_Q]$.
   
 ## Name-Value Pair Arguments
   
@@ -27,7 +27,7 @@ neutron diffraction.
 : Wavelength of the incident neutron beam in Å.
   
 `'ki'`
-: Momentum of the incidend neutron beam in Å$$^{-1}$$, alternative
+: Momentum of the incidend neutron beam in Å$^{-1}$, alternative
   input to `lambda`.
   
 `'sense'`

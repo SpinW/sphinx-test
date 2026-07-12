@@ -173,7 +173,9 @@ title('f) stripy, KH, S^{yy}','fontsize',15)
 
 ```{image} /_static/img/tutorials/tutorial16/tutorial16_07.png
 :alt: 
-``` ```{image} /_static/img/tutorials/tutorial16/tutorial16_08.png
+```
+
+```{image} /_static/img/tutorials/tutorial16/tutorial16_08.png
 :alt: 
 ``` 
 
@@ -259,7 +261,9 @@ title('j) zig-zag, KH-J_2-J_3, S^{y''y''}=S^{xx}','fontsize',15)
 
 ```{image} /_static/img/tutorials/tutorial16/tutorial16_11.png
 :alt: 
-``` ```{image} /_static/img/tutorials/tutorial16/tutorial16_12.png
+```
+
+```{image} /_static/img/tutorials/tutorial16/tutorial16_12.png
 :alt: 
 ``` 
 

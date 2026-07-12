@@ -78,7 +78,7 @@ hPatch.ButtonDownFcn = @(hPatch,hit)swplot.patchfacefcn(hPatch,hit,fun,'face')
 `dLim`
 : Upper limit of the absolute value of the determinant that
   determines whether a point is on a plane spanned by the two
-  edges of a triangle. Default value is $$10^{-7}$$ (tested).
+  edges of a triangle. Default value is $10^{-7}$ (tested).
   
 ## See Also
   

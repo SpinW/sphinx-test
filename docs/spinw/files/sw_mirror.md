@@ -21,7 +21,7 @@ To mirror any column vector use the following:
 Vp = M * V
 ```
  
-To apply mirror plane operation on tensors ($$3\times 3$$ matrices) use the
+To apply mirror plane operation on tensors ($3\times 3$ matrices) use the
 following command:
  
 ```matlab
@@ -34,15 +34,15 @@ Ap = M * A * M'
 : 3D Row vector, normal to the mirror plane.
   
 `V`
-: Matrix of 3D vectors, dimensions are $$[3\times N]$$.
+: Matrix of 3D vectors, dimensions are $[3\times N]$.
   
 ## Output Arguments
   
 `Vp`
-: Mirrored vectors in a matrix with dimensions of $$[3\times N]$$.
+: Mirrored vectors in a matrix with dimensions of $[3\times N]$.
  
 `mirM`
-: Matrix of the mirror transformation, dimensions are $$[3\times 3]$$.
+: Matrix of the mirror transformation, dimensions are $[3\times 3]$.
   
 ## See Also
   

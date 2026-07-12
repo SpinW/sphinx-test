@@ -13,7 +13,7 @@
 `[symOp, symInfo] = swsym.generator(sym)` gives the symmetry operators
 based on a given space group number or a string of symmetry operators.
 Without arguments, the function returns the name of all space groups
-stored in [symmetry.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'symmetry.dat'])) file.
+stored in `symmetry.dat` file.
    
 `[symOp, symInfo] = swsym.generator(sym,fid)` also prints the symmetry
 operators to the file identified by `fid`.
@@ -24,7 +24,7 @@ operators to the file identified by `fid`.
 : Either the label of the space group or the index from
   the [International Tables of Crystallography](http://it.iucr.org/A/) or
   string containing the space group operators in the same format as used
-  in the [symmetry.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'symmetry.dat'])) file (for details see [swsym.str](#swsym-str)).
+  in the `symmetry.dat` file (for details see [swsym.str](#swsym-str)).
   
 `fid`
 : If non-zero, the symmetry operators will be printed to the file
@@ -36,17 +36,17 @@ operators to the file identified by `fid`.
 ## Output Arguments
   
 `symOp`
-: Symmetry operators in a matrix with dimensions of $$[3\times 4\times
-  n_{op}]$$.
+: Symmetry operators in a matrix with dimensions of $[3\times 4\times
+  n_{op}]$.
  
 `symInfo`
 : Structure that contains additional information about the space 
   group with the following fields:
   * `name`    Name of the space group, if the `swsym.generator`
               function is called with no input, name stores the name of
-              all space groups from [symmetry.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'symmetry.dat'])) file in a cell.
+              all space groups from `symmetry.dat` file in a cell.
   * `str`     The string of the symmetry operations.
-  * `num`     The line index in the [symmetry.dat](matlab:edit([sw_rootdir,'dat_files',filesep,'symmetry.dat'])) file.
+  * `num`     The line index in the `symmetry.dat` file.
   
 ## See Also
   

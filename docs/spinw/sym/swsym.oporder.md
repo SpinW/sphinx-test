@@ -43,7 +43,7 @@ R =
 ## Input Arguments
   
 `symOp`
-:	Symmetry operator in a matrix with dimensions of $$[3\times 4]$$.
+:	Symmetry operator in a matrix with dimensions of $[3\times 4]$.
   
 ## Output Arguments
  

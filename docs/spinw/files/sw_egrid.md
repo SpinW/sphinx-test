@@ -9,9 +9,9 @@
 ## Description
   
 `spectra = sw_egrid(spectra,Name,Value)` takes a calculated spectrum that
-contains $$S^{\alpha\beta}(Q,\omega)$$ and converts it into an intensity
+contains $S^{\alpha\beta}(Q,\omega)$ and converts it into an intensity
 map `I(i,j)` via binning the energy values and selecting a given
-component of the $$9\times 9$$ spin-spin correlation matrix. For example by
+component of the $9\times 9$ spin-spin correlation matrix. For example by
 default (setting the `component` parameter to `'Sperp'`) it selects the
 neutron scattering cross section via calculating the following quantity:
  
@@ -22,8 +22,8 @@ neutron scattering cross section via calculating the following quantity:
   
 The line will create an energy bin, with steps of 0.1 and bins the
 spin-spin correlation function. Two different matrices will be
-calculated, first using the sum of the $$S^{xx}$$ and $$S^{yy}$$ components, second
-will contain the $$S^{zz}$$ component of the correlation function.
+calculated, first using the sum of the $S^{xx}$ and $S^{yy}$ components, second
+will contain the $S^{zz}$ component of the correlation function.
  
 ```matlab
 tri = sw_model('triAF',1)
@@ -51,12 +51,12 @@ sw_plotspec(spectra,'mode','color','axLim',[0 0.5],'dE',0.2)
 : A string that Selects a correlation function component that will be
   binned. The possible values are:
   * `'Sperp'` bins the magnetic neutron scattering intensity
-    (the $$\langle S_\perp S_\perp\rangle$$ expectation value). Default.
+    (the $\langle S_\perp S_\perp\rangle$ expectation value). Default.
   * `'Sab'`   bins the selected components of the spin-spin
               correlation function. Letter `a` and `b` can be `x`,
               `y` or `z`. For example: `'Sxx'` will convolute the
-              $$S^{xx}(Q,\omega)$$ component of the correlation function with the
-              dispersion. Here the $$xyz$$ is the standard coordinate system.
+              $S^{xx}(Q,\omega)$ component of the correlation function with the
+              dispersion. Here the $xyz$ is the standard coordinate system.
   *`'Mab'`    bins the selected components of the spin-spin
               correlation function in the Blume-Maleev coordinate system.
               Letter `a` and `b` can be `x`, `y` or `z`. For example:
@@ -72,12 +72,12 @@ sw_plotspec(spectra,'mode','color','axLim',[0 0.5],'dE',0.2)
               neutron scattering, with inciden polarisation of
               `Pa` where letter `a` can be `x`, `y` or `z`. For example:
               `'Py'` will convolute the scattering intensity
-              simulated for incident polarisation $$P_i\|y$$. The
+              simulated for incident polarisation $P_i\|y$. The
               used coordinates are in the Blume-Maleev coordinate
               system.
   * `'fName'` where `fName` is one of the field names of the input
               structure spectra. This field should contain a
-              matrix with dimensions of $$[n_{mode}\times n_{hkl}]$$.
+              matrix with dimensions of $[n_{mode}\times n_{hkl}]$.
  
   Any linear combination of the above are allowed, for example:
   `'Sxx+2*Syy'` will bin the linear combination of the `xx` component of
@@ -85,12 +85,12 @@ sw_plotspec(spectra,'mode','color','axLim',[0 0.5],'dE',0.2)
   Several cross section can be convoluted and stored
   independently, if component is a cell array containing strings
   each containing any linear combination of cross sections as
-  above, the cell array needs to have size $$[1\times n_{cell}]$$, for
+  above, the cell array needs to have size $[1\times n_{cell}]$, for
   example `{'Sxx' 'Syy' 'Szz'}`.
   
 `'Evect'`
 : Row vector that defines the center/edge of the energy bins of the
-  calculated output, number of elements is $$n_E$$. The energy units
+  calculated output, number of elements is $n_E$. The energy units
   are defined by the [spinw.unit](#spinw-unit) property. Default
   value is an edge bin: `linspace(0,1.1*maxOmega,501)`.
   
@@ -112,13 +112,13 @@ sw_plotspec(spectra,'mode','color','axLim',[0 0.5],'dE',0.2)
   [spinw.twin](#spinw-twin). Default value is true.
   
 `'modeIdx'`
-: Select certain spin wave modes from the $$2*n_{magatom}$$ number of
+: Select certain spin wave modes from the $2*n_{magatom}$ number of
   modes to include in the output. Default value is `1:2*nMagAtom` to
   include all modes.
   
 `'epsilon'`
 : Error limit, used to determine whether a given energy bin is
-  uniform or not. Default value is $$10^{-5}$$.
+  uniform or not. Default value is $10^{-5}$.
   
 `'autoEmin'`
 : Due to the finite numerical precision, the spin wave energies
@@ -135,10 +135,10 @@ sw_plotspec(spectra,'mode','color','axLim',[0 0.5],'dE',0.2)
   smaller than the energy bin size. Default value is true.
   
 {% include note.html content=" The Blume-Maleev coordinate system is a cartesian coordinate
-system with $$x_{BM}$$, $$y_{BM}$$ and $$z_{BM}$$ basis vectors defined as:
-<br> $$x_{BM}$$    parallel to the momentum transfer $$Q$$,
-<br> $$y_{BM}$$    perpendicular to $$x_{BM}$$ in the scattering plane,
-<br> $$z_{BM}$$    perpendicular to the scattering plane.
+system with $x_{BM}$, $y_{BM}$ and $z_{BM}$ basis vectors defined as:
+<br> $x_{BM}$    parallel to the momentum transfer $Q$,
+<br> $y_{BM}$    perpendicular to $x_{BM}$ in the scattering plane,
+<br> $z_{BM}$    perpendicular to the scattering plane.
 " %}
   
 ## Output Arguments
@@ -147,11 +147,11 @@ system with $$x_{BM}$$, $$y_{BM}$$ and $$z_{BM}$$ basis vectors defined as:
   
 `swConv`
 : Stores the selected cross section binned in energy in a matrix with
-  dimensions of $$[n_E\times n_{hkl}]$$. Includes the Bose factor.
+  dimensions of $[n_E\times n_{hkl}]$. Includes the Bose factor.
   
 `swInt`
 : Stores the selected cross sections for every mode in a matrix with
-  dimensions of $$[n_{mode}\times n_{hkl}]$$.
+  dimensions of $[n_{mode}\times n_{hkl}]$.
   
 `T`
 : Input temperature.
@@ -169,7 +169,7 @@ system with $$x_{BM}$$, $$y_{BM}$$ and $$z_{BM}$$ basis vectors defined as:
 If `'component'` parameter is a cell array or the spectra of multiple
 twins are convoluted separately, swConv and swInt will be a cell that
 packages the matrices corresponding to each component/twin. The
-dimensions of the cell are $$[n_{conv}\times n_{twin}]$$.
+dimensions of the cell are $[n_{conv}\times n_{twin}]$.
   
 ## See Also
   

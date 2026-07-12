@@ -14,4 +14,4 @@ method, property name. Works the same way as the Matlab built-in
  
 ## See Also
  
-[swdoc](#swdoc), [help](https://www.mathworks.com/help/matlab/ref/help.html)
+[swdoc](#swfiles-swdoc), [help](https://www.mathworks.com/help/matlab/ref/help.html)

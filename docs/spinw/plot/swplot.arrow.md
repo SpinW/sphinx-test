@@ -17,7 +17,7 @@ between a given start and end position. The arrows will be a triangulated
 [patch](https://www.mathworks.com/help/matlab/ref/patch.html) object.
    
 `hPatch = swplot.arrow(rStart, rEnd, R, alpha, lHead, nPatch)` creates 
-arrows with $$5 n_{patch}$$ number of patch faces per arrow.
+arrows with $5 n_{patch}$ number of patch faces per arrow.
  
 `hPatch = swplot.arrow(handle, ...)` adds the generated patch object to a
 given axis if `handle` is an axis handle or adds the arrows to an
@@ -26,7 +26,7 @@ object.
    
 ## Examples
  
-Draw a 100 random arrows in the $$(\pm 1,\pm 1,\pm 1)$$ cube:
+Draw a 100 random arrows in the $(\pm 1,\pm 1,\pm 1)$ cube:
  
 ```matlab
 swplot.figure
@@ -47,11 +47,11 @@ swplot.zoom(40)
   
 `rStart`
 : Coordinates of the arrow starting point, one vector per arrow in a
-  matrix with dimensions of $$[3\times n_{obj}]$$.
+  matrix with dimensions of $[3\times n_{obj}]$.
   
 `rEnd`
 : Coordinates of the arrow end point, one vector per arrow in a
-  matrix with dimensions of $$[3\times n_{obj}]$$.
+  matrix with dimensions of $[3\times n_{obj}]$.
   
 `R`
 : Radius of the arrow body, scalar.
@@ -65,7 +65,7 @@ swplot.zoom(40)
 `nPatch`
 : Number of points on the circle of the body, default value is stored in
   `swpref.getpref('npatch')`. The final patch object will have
-  $$5n_{patch}$$ number of faces and $$3n_{patch}$$ number of vertices.
+  $5n_{patch}$ number of faces and $3n_{patch}$ number of vertices.
   
 ## See Also
   

@@ -23,22 +23,22 @@ data due to low signal to noise ratio of the measurement.
 ## Name-Value Pair Arguments
   
 `'method'`
-: String that determines the method to generate the $$Q$$ points, options:
+: String that determines the method to generate the $Q$ points, options:
   * `'random'`    The bin volume will be randomly sampled.
   * `'grid'`      The bin volume will be split up to a finer regular
                   grid.
   
 `'dQ'`
-: Row vector with 3 elements. The width of the $$Q$$ bin
+: Row vector with 3 elements. The width of the $Q$ bin
   along the three reciprocal lattice directions. The spectrum
-  will be integrated in the $$Q\pm (\delta Q/2)$$ range. Default value is
+  will be integrated in the $Q\pm (\delta Q/2)$ range. Default value is
   `[0.1 0.1 0.1]`.
   
 `'nQ'`
 : Row vector with 3 elements when `method` is `grid` and gives the
-  number of $$Q$$ points along the three reciprocal lattice directions to
+  number of $Q$ points along the three reciprocal lattice directions to
   average over. When `method` is `random` it is a scalar that determines
-  the number of random $$Q$$ points.
+  the number of random $Q$ points.
  
 `'fid'`
 : Defines whether to provide text output. The default value is determined

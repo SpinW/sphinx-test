@@ -19,13 +19,13 @@ QH QK QL minE maxE I1 E1 s1 I2 E2 s2 ...
 ```
 where:
    
-* `QH`        $$h$$ index of the $$Q$$ point in rlu,
-* `QK`        $$k$$ index of the $$Q$$ point in rlu,
-* `QL`        $$l$$ index of the $$Q$$ point in rlu,
-* `minE`      lower boundary of the $$E$$ scan,
-* `maxE`      upper boundary of the $$E$$ scan,
-* `In`        intensity of the $$n$$th spin wave mode,
-* `En`        center of the $$n$$th spin wave mode, has to be in increasing order,
+* `QH`        $h$ index of the $Q$ point in rlu,
+* `QK`        $k$ index of the $Q$ point in rlu,
+* `QL`        $l$ index of the $Q$ point in rlu,
+* `minE`      lower boundary of the $E$ scan,
+* `maxE`      upper boundary of the $E$ scan,
+* `In`        intensity of the $n$th spin wave mode,
+* `En`        center of the $n$th spin wave mode, has to be in increasing order,
 * `sn`        standard deviation of the corresponding energy
    
 The number of modes in a single line of the data file is unlimited,
@@ -43,12 +43,12 @@ correlation is undefined, unpolarised neutron scattering intensity is
 assumed (equivalent to `'Sperp'`). When cross sections measured in the
 Blume-Maleev coordinate system, see [sw_egrid](#sw-egrid), the normal to the
 scattering plane has to be also defined. This can be given in a second
-pair of square brackes in the $$xyz$$ coordinate system, for example: `'[Myy]
-[1 0 0]'`. If $$n$$ is undefined, the default value is `'[0 0 1]'`.
+pair of square brackes in the $xyz$ coordinate system, for example: `'[Myy]
+[1 0 0]'`. If $n$ is undefined, the default value is `'[0 0 1]'`.
    
 ## Examples
  
-Example input data file (polarised scans in the $$(0,k,l)$$ scattering plane):
+Example input data file (polarised scans in the $(0,k,l)$ scattering plane):
   
 ```
 QH    QK        QL      ENlim1  ENlim2  I1  EN1       s1    I2  EN2       s2

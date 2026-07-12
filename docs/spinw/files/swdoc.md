@@ -1,4 +1,4 @@
-(swdoc)=
+(swfiles-swdoc)=
 
 # swdoc
 

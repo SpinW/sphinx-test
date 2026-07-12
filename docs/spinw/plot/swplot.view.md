@@ -11,7 +11,7 @@
 ## Description
   
 `swplot.view(ax)` controls the plane that the camera sees. The
-preconfigured options are pairs of $$abc$$ axes or $$hkl$$ reciprocal lattice
+preconfigured options are pairs of $abc$ axes or $hkl$ reciprocal lattice
 axes.
   
 ## Input Arguments

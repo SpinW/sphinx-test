@@ -8,7 +8,7 @@
   
 ## Description
   
-`addmatrix(obj,Name,Value)` adds a new $$[3\times 3]$$ matrix to the
+`addmatrix(obj,Name,Value)` adds a new $[3\times 3]$ matrix to the
 [spinw.matrix](#spinw-matrix) field of `obj`. The added matrices can be later assigned
 to bonds, single ion anisotropy terms or g-tensors of magnetic atoms. If
 the given matrix label already exists in `obj`, instead of adding new
@@ -55,14 +55,14 @@ crystal.matrix.mat
 `'value'`
 : The actual numerical values to be added as a matrix. It can have the
   following shapes:
-  * $$[3\times 3]$$ the given values will be stored in [spinw.matrix](#spinw-matrix) as
+  * $[3\times 3]$ the given values will be stored in [spinw.matrix](#spinw-matrix) as
     they are given.
-  * $$[1\times 1]$$ the given value will be multiplied with `eye(3)`.
+  * $[1\times 1]$ the given value will be multiplied with `eye(3)`.
   * `[Mx My Mz]` the given triplet will be used to define an
     antisymmetric matrix `M = [0 M3 -M2;-M3 0 M1;M2 -M1 0]`. 
   
 `'label'`
-: Label string for plotting default value is `'matI'`, where $$I$$ is the index
+: Label string for plotting default value is `'matI'`, where $I$ is the index
   of the matrix.
   
 `'color'`

@@ -11,8 +11,8 @@
 ## Description
   
 `swplot.plotbase(Name,Value)` plots the three basis vectors that define
-the coordinate system of the plot, either the $$abc$$ lattice vectors,
-$$xyz$$ Descartes coodinate system or the $$hkl$$ reciprocal lattice vectors.
+the coordinate system of the plot, either the $abc$ lattice vectors,
+$xyz$ Descartes coodinate system or the $hkl$ reciprocal lattice vectors.
   
 ## Name-Value Pair Arguments
   
@@ -21,7 +21,7 @@ $$xyz$$ Descartes coodinate system or the $$hkl$$ reciprocal lattice vectors.
   values are:
   * `abc`     plots the lattice vectors (default),
   * `hkl`     plots the reciprocal lattice vectors,
-  * `xyz`     plots the $$xyz$$ Descartes coordinate system.
+  * `xyz`     plots the $xyz$ Descartes coordinate system.
   
 `'length'`
 : Determines the length of the 3 basis vectors. If 0, the
@@ -35,7 +35,7 @@ $$xyz$$ Descartes coodinate system or the $$hkl$$ reciprocal lattice vectors.
   
 `'color'`
 : Color of the arrows, either a cell of three color name strings or a
-  matrix with dimensions of $${3\times 3]$$ where each column defines the
+  matrix with dimensions of ${3\times 3]$ where each column defines the
   RGB values of a color. Default value is `{'red' 'green' 'blue'}`.
   
 `'R'`
@@ -48,7 +48,7 @@ $$xyz$$ Descartes coodinate system or the $$hkl$$ reciprocal lattice vectors.
 : Length of the arrow head, default value is 0.5 Å.
   
 `'d'`
-: Distance from origin in $$xyz$$ units, default value is `[1 1 1]`.
+: Distance from origin in $xyz$ units, default value is `[1 1 1]`.
   
 `'dtext'` : Distance of the label from the arrow in xyz units, default
   value is 0.5 Å.

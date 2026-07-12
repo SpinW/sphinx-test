@@ -89,7 +89,7 @@ Helper function that can be also used as standalone.
 * [swplot.subfigure](#swplot-subfigure) changes position of figure window on the screen
 * [swplot.subplot](#swplot-subplot) create subplots with variable gaps between axes
  
-$$Name: SpinW$$ ($$Version: 3.1$$)
-$$Author: S. Tóth and S. Ward$$ ($$Contact: admin@spinw.org, @spinw4 on Twitter$$)
-$$Revision: 1591$$ ($$Date: 25-Apr-2019$$)
-$$License: GNU GENERAL PUBLIC LICENSE$$
+Name: SpinW (Version: 3.1)
+Author: S. Tóth and S. Ward (Contact: admin@spinw.org, @spinw4 on Twitter)
+Revision: 1591 (Date: 25-Apr-2019)
+License: GNU GENERAL PUBLIC LICENSE

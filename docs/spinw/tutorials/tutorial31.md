@@ -357,7 +357,9 @@ added to its diagonal!
 
 ```{image} /_static/img/tutorials/tutorial31/tutorial31_09.png
 :alt: 
-``` ```{image} /_static/img/tutorials/tutorial31/tutorial31_10.png
+```
+
+```{image} /_static/img/tutorials/tutorial31/tutorial31_10.png
 :alt: 
 ``` 
 
@@ -429,7 +431,9 @@ Ground state energy: -1.000 meV/spin.
 
 ```{image} /_static/img/tutorials/tutorial31/tutorial31_11.png
 :alt: 
-``` ```{image} /_static/img/tutorials/tutorial31/tutorial31_12.png
+```
+
+```{image} /_static/img/tutorials/tutorial31/tutorial31_12.png
 :alt: 
 ``` 
 

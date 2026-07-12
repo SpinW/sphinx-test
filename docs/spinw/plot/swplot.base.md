@@ -25,7 +25,7 @@ graphic objects.
 ## Input Arguments
   
 `BV`
-: Either a $$[3\times 3]$$ matrix of the new basis vectors or a [spinw](#spinw)
+: Either a $[3\times 3]$ matrix of the new basis vectors or a [spinw](#spinw)
   object where the new basis vectors will be the lattice
   units and the basis vectors are generated via [spinw.basisvector](#spinw-basisvector).
   
