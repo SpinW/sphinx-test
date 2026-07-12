@@ -2,6 +2,15 @@
 
 # Functions in swfiles
 
+```{toctree}
+:maxdepth: 1
+:glob:
+:hidden:
+
+files/*
+files/functions/*
+```
+
 This folder contains all the spectral functions and general functions
 that are related to SpinW.
  

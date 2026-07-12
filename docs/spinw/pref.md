@@ -2,6 +2,14 @@
 
 # swpref class
 
+```{toctree}
+:maxdepth: 1
+:glob:
+:hidden:
+
+pref/*
+```
+
 ## Syntax
  
 `pref = swpref`

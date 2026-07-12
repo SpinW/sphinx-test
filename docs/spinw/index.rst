@@ -15,4 +15,3 @@ Documentation for the original MATLAB implementation of SpinW.
    plot
    pref
    sym
-   SpinW Issues <https://github.com/SpinW/spinw/issues>

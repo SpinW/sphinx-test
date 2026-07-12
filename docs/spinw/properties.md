@@ -1,11 +1,12 @@
 (properties)=
 
-# SpinW class properties
+# Properties
 
 The spinw object properties store all the information necessary for the spin wave calculation. It has 8 fields with several subfields, see below.
 
 
 
+(prop-lattice)=
 ## lattice
 
 stores the unit cell parameters
@@ -32,6 +33,7 @@ stores the unit cell parameters
 
 
 
+(prop-unit-cell)=
 ## unit_cell
 
 Stores the atoms in the crystallographic unit cell        
@@ -88,6 +90,7 @@ Stores the atoms in the crystallographic unit cell
            included in the structure factor as $\exp(-2W(d))$.
         
 
+(prop-twin)=
 ## twin
 
 stores the crystal twin parameters
@@ -103,6 +106,7 @@ stores the crystal twin parameters
          : Volume ratio of the different twins, stored in a
             row vector with $n_{twin}$ elements.
         
+(prop-matrix)=
 ## matrix
 
 stores 3x3 matrices for using them in the Hamiltonian
@@ -124,6 +128,7 @@ stores 3x3 matrices for using them in the Hamiltonian
          : Label for every matrix, stored as string in a cell with
            dimensions of $[1\times n_{matrix}]$.
         
+(prop-single-ion)=
 ## single_ion
 
 stores single ion terms of the Hamiltonian
@@ -151,6 +156,7 @@ stores single ion terms of the Hamiltonian
          : Temperature, scalar, unit is defined in [spinw.unit] (default
            unit is Kelvin).
         
+(prop-coupling)=
 ## coupling
 
 stores the list of bonds
@@ -199,6 +205,7 @@ stores the list of bonds
            dipolar interactions won't be calculated using space group
            symmetry.
         
+(prop-mag-str)=
 ## mag_str
 
 stores the magnetic structure
@@ -223,6 +230,7 @@ stores the magnetic structure
            crystallographic cell. The $[1\times 3]$ vector extends the cell
            along the $a$, $b$ and $c$ axes.
         
+(prop-unit)=
 ## unit
 
 stores the physical units for the Hamiltonian

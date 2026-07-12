@@ -1,12 +1,12 @@
 (class)=
 
-# SpinW class
+# SpinW class overview
 
-To perform calculation using the SpinW library, we need to create an object (spinw class type). 
-It stores all the necessary parameters for the calculation (crystal structure, interactions, magnetic structure, etc.). 
-In the object oriented programming dictionary, the data stored in an object, are called properties. 
-Beside the data, the object also has assigned functions that perform different computations on the object data. 
-These functions are called methods and they take the object as first input argument. 
+To perform calculation using the SpinW library, we need to create an object (spinw class type).
+It stores all the necessary parameters for the calculation (crystal structure, interactions, magnetic structure, etc.).
+In the object oriented programming dictionary, the data stored in an object, are called properties.
+Beside the data, the object also has assigned functions that perform different computations on the object data.
+These functions are called methods and they take the object as first input argument.
 To create an spinw class object you can simply type:
 
 ```matlab
@@ -40,7 +40,7 @@ coupling
             dl: [3xnCoupling integer]  nCoupling=0
          atom1: [1xnCoupling integer]
          atom2: [1xnCoupling integer]
-       mat_idx: [3xnCoupling integer]Please note: The claim for Per-Diem and reimbursements must be submitted no later than 3 months after returning from the business trip, ESS-0183602, Rules for Travel Allowance.
+       mat_idx: [3xnCoupling integer]
            idx: [1xnCoupling integer]
 mag_str
          N_ext: [1x3 integer]
@@ -85,6 +85,7 @@ This reflects better the input argument structure. The first argument is the spi
 ```matlab
 model1.lattice.sym
 ```
+
 ```text
 ans = 5
 ```
@@ -103,24 +104,21 @@ ans =
 
 ### Complete list of properties
 
-There are eight public properties of spinw each with several subfields: 
+There are eight public properties of spinw each with several subfields:
 
-<div>
-    <ul>
-    <li><a href="/SWproperties#lattice">spinw.lattice</a></li>
-    <li><a href="/SWproperties#unit_cell">spinw.unit_cell</a></li>
-    <li><a href="/SWproperties#twin">spinw.twin</a></li>
-    <li><a href="/SWproperties#matrix">spinw.matrix</a></li>
-    <li><a href="/SWproperties#single_ion">spinw.single_ion</a></li>
-    <li><a href="/SWproperties#coupling">spinw.coupling</a></li>
-    <li><a href="/SWproperties#mag_str">spinw.mag_str</a></li>
-    <li><a href="/SWproperties#unit">spinw.unit</a></li>
-    </ul>
-</div>
+- [spinw.lattice](#prop-lattice)
+- [spinw.unit_cell](#prop-unit-cell)
+- [spinw.twin](#prop-twin)
+- [spinw.matrix](#prop-matrix)
+- [spinw.single_ion](#prop-single-ion)
+- [spinw.coupling](#prop-coupling)
+- [spinw.mag_str](#prop-mag-str)
+- [spinw.unit](#prop-unit)
 
 ## Methods
 
 In line with the above example the general argument structure of the method functions is one of the following:
+
 ```text
 function(obj,'Option1',Value1,'Option2',Value2,...)
 function(obj,Value1,Value2,...)
@@ -128,9 +126,8 @@ function(obj,Value1,Value2,...)
 
 The first type of argument list is used for functions that require variable number of input parameters with default values. The second type of argument structure is used for functions that require maximum up to three fixed input parameter. Every method has help that can be called by one of the following methods:
 
-* selecting the function name in the Editor/Command Window and pressing F1
-* in the Command Window typing for example:
-
+- selecting the function name in the Editor/Command Window and pressing F1
+- in the Command Window typing for example:
 
 ```matlab
 help spinw.genlattice
@@ -179,8 +176,5 @@ It only copies the pointer. Thus if I change something on model1, model2 will ch
 ```matlab
 model2 = copy(model1);
 ```
-
-
-
 
 <sript src="/js/toc.js"></sript>

@@ -2,6 +2,14 @@
 
 # swplot package
 
+```{toctree}
+:maxdepth: 1
+:glob:
+:hidden:
+
+plot/*
+```
+
 The package contains functions that can create and control plotting of 3D
 objects. It contains low level functions to plot specific shapes on any
 figure (cylinder, line, arrow, ellipsoid, polyhedron, sphere, text) that

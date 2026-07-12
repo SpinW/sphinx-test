@@ -1,6 +1,14 @@
 (spinw)=
 
-# spinw class
+# Methods
+
+```{toctree}
+:maxdepth: 1
+:glob:
+:hidden:
+
+methods/*
+```
 
 ## Syntax
  
