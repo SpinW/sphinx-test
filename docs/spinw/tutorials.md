@@ -4,6 +4,8 @@
 
 These tutorials can help to understand quickly how SpinW works. It is possible to download the MATLAB code of any tutorial using the `grabcode` command with the tutorial URL.
 
+For example: `grabcode('http://www.spinw.org/tutorials/01tutorial')`
+
 ```{toctree}
 :maxdepth: 1
 :hidden:
@@ -11,6 +13,10 @@ These tutorials can help to understand quickly how SpinW works. It is possible t
 
 tutorials/tutorial*
 ```
+
+% This page uses .md to manual control toctree style.
+% while the .rst {toctree} still needs to be called so
+% the sidebar behaves correctly. :hidden: is used.
 
 - [Tutorial 1](tutorials/tutorial01) — Spin wave spectrum of the Heisenberg ferromagnetic nearest-neighbor spin chain
 - [Tutorial 2](tutorials/tutorial02) — Antiferromagnetic nearest-neighbour spin chain
