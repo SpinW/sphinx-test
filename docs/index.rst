@@ -95,7 +95,7 @@ quasi-classical numerical methods:
        + B \sum_i g_i S_i
 
 where :math:`S_i` are spin vector operators, :math:`J_{ij}` are 3x3 matrices
-describing pair coupling between spins, :math:`A_{ij}` are 3x3 anisotropy
+describing pair coupling between spins, :math:`A_{i}` are 3x3 anisotropy
 matrices, :math:`B` is the external magnetic field, and :math:`g_i` is the
 g-tensor.
 
