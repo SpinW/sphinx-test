@@ -44,6 +44,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_theme = "pydata_sphinx_theme"
 
 html_theme_options = {
+    "default_mode": "light",
     "logo": {
         "image_light": "_static/img/spinw3_header.png",
         "image_dark": "_static/img/spinw3_header.png",
@@ -51,7 +52,7 @@ html_theme_options = {
     },
     "navbar_align": "content",
     "navbar_center": ["navbar-nav"],
-    "navbar_end": ["theme-switcher", "navbar-icon-links"],
+    "navbar_end": ["navbar-icon-links"],
     "navbar_persistent": ["search-button"],
     "icon_links": [
         {
